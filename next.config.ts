@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   //allowedDevOrigins: ['192.168.0.163'],
-  //basePath: '/sveden',
+  basePath: '/sveden',
   assetPrefix: '/sveden',
   trailingSlash: true,
   distDir: 'build'

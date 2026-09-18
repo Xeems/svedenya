@@ -47,7 +47,7 @@ export default function SideNav() {
                               {/* asChild указывает, что кнопкой станет лежащий внутри Link */}
                               <SidebarMenuButton asChild className="h-auto py-2.5 px-3 whitespace-normal align-middle">
                                   <Link 
-                                      href={`/sveden/${link.href}`}
+                                      href={`/${link.href}`}
                                       className="hover:text-[#35bc99] font-medium text-base transition-colors line-clamp-3 block w-full"
                                   > 
                                       {link.name}
