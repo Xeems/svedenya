@@ -37,18 +37,17 @@ export default function SideNav() {
     <Sidebar>
         <SidebarContent>
             <SidebarGroup>
-                <SidebarGroupLabel className="text-sm font-semibold px-4 pt-4">
+                <SidebarGroupLabel className="text-md text-primary-foreground font-semibold px-4 pt-4">
                   Навигация
                 </SidebarGroupLabel>
-                <SidebarGroupContent className="p-2">
-                    <SidebarMenu className="gap-1">
+                <SidebarGroupContent className='px-2'>
+                    <SidebarMenu className="gap-1 py-4 px-2">
                         {navigationLinks.map((link) => (
-                          <SidebarMenuItem key={link.href}>
-                              {/* asChild указывает, что кнопкой станет лежащий внутри Link */}
-                              <SidebarMenuButton asChild className="h-auto py-2.5 px-3 whitespace-normal align-middle">
+                          <SidebarMenuItem key={link.href} className='transition-all duration-500 ease-in-out'>
+                              <SidebarMenuButton asChild className="h-auto py-2.5 px-3 hover:font-semibold hover:text-accent-foreground whitespace-normal align-middle">
                                   <Link 
                                       href={`/${link.href}`}
-                                      className="hover:text-[#35bc99] font-medium text-base transition-colors line-clamp-3 block w-full"
+                                      className="font-medium text-base transition-colors line-clamp-3 block w-full"
                                   > 
                                       {link.name}
                                   </Link>

@@ -1,3 +1,4 @@
+import PageH1Header from '@/components/PageH1Header';
 import { Table } from '@/components/Table';
 import React from 'react'
 
@@ -85,8 +86,8 @@ const orgData = [
 
 export default function page() {
   return (
-      <section className='p-4 flex flex-col gap-8 lg:max-w-2/3'>
-        <h1 className='text-4xl font-medium'>Основные сведения</h1>
+      <section className='p-4 flex flex-col'>
+        <PageH1Header>Основные сведения</PageH1Header>
         <Table data={orgData}/>
       </section>
   )
