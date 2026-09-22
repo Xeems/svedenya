@@ -1,4 +1,5 @@
 import PageH1Header from "@/components/PageH1Header";
+import SignedDocument from "@/components/SignedDocument";
 import Link from "next/link";
 
 const programsData = [
@@ -60,6 +61,55 @@ const programsData = [
     },
   ];
 
+
+// 3.5.4 
+const admissionResults = [
+  {
+    code: "3.2.4",
+    name: "Медицина труда",
+    level: "Подготовка научно-педагогических кадров в аспирантуре",
+    form: "очная",
+    federalBudget: 3,
+    regionalBudget: 0,
+    localBudget: 0,
+    paidContracts: 0,
+    averageScore: 15,
+  },
+  {
+    code: "31.08.42",
+    name: "Неврология",
+    level: "Ординатура",
+    form: "очная",
+    federalBudget: 4,
+    regionalBudget: 0,
+    localBudget: 0,
+    paidContracts: 0,
+    averageScore: 137,
+  },
+  {
+    code: "31.08.44",
+    name: "Профпатология",
+    level: "Ординатура",
+    form: "очная",
+    federalBudget: 1,
+    regionalBudget: 0,
+    localBudget: 0,
+    paidContracts: 0,
+    averageScore: 106,
+  },
+  {
+    code: "31.08.49",
+    name: "Терапия",
+    level: "Ординатура",
+    form: "очная",
+    federalBudget: 1,
+    regionalBudget: 0,
+    localBudget: 0,
+    paidContracts: 0,
+    averageScore: 136,
+  },
+]
+
 export default function page() {
   return (
     <section>
@@ -97,6 +147,8 @@ export default function page() {
           </tbody>
         </table>
         <Link href="ссылка на документ" itemProp="languageEl"> Документ, содержащий информацию о языках, на которых осуществляется образование (обучение) </Link>
+            
+      <SignedDocument documentHref="123.pdf" itemProp="eduPriemEl" signHref="123.sig" documentName="Информация о результатах приема"/>
       </div>
     </section>
     )
