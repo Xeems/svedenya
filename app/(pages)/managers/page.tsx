@@ -66,7 +66,7 @@ export default function page() {
       </section>
 
       {/* Руководители филиалов */}
-      <section>
+      <section className="hidden">
         <ul itemProp="rucovodstvoFil">
           <li itemProp="nameFil">Филиалы отсутсвуют </li>
           <li itemProp="fio"> - </li>
