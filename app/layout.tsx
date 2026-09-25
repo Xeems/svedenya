@@ -24,19 +24,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="ru" 
       className={cn("h-full", "antialiased", roboto.className, notoSans.variable, playfairDisplayHeading.variable)}
     >
-      <body className="min-h-full w-full bg-background text-foreground antialiased">
+      <body className="min-h-full w-full bg-background text-foreground antialiased ">
         <SidebarProvider>
           <SideNav />
-          <main className="flex-1 flex flex-col min-w-0 relative">
-            <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-              <SidebarTrigger />
-            </header>
-            
+            <div className="flex-1 flex flex-col min-w-0 relative">
+              <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+                <SidebarTrigger />
+              </header>
+              
 
-            <div className="flex-1 p-4 md:p-6">
-              {children}
+              <div className="flex-1 p-4 md:p-6">
+                {children}
+              </div>
             </div>
-          </main>
+        
         </SidebarProvider>
       </body>
     </html>
