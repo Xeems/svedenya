@@ -9,7 +9,7 @@ const cateringData = [
     },
   ]
 
-export default async function cateringPage() {
+export default async function CateringPage() {
   return (
     <main className="space-y-8">
       <PageH1Header>Организация питания в образовательной организации</PageH1Header>

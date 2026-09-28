@@ -62,7 +62,7 @@ const orgData = [
     label: "Адрес официального сайта",
     value: (
       <a href="https://nii-kpg.ru/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-        https://nii-kpg.ru/
+        https://nii-kpg.ru/ 
       </a>
     ),
     itemPropValue: "site"
