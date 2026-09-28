@@ -281,7 +281,7 @@ export default function page() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[100px]">Код, шифр</TableHead>
+                <TableHead >Код, шифр</TableHead>
                 <TableHead>Наименование специальности, направления подготовки, наименование группы научных специальностей</TableHead>
                 <TableHead>Перечень научных направлений, в рамках которых ведется научная (научно-исследовательская) деятельность</TableHead>
                 <TableHead>Образовательная программа, направленность, профиль, шифр и наименование научной специальности</TableHead>
