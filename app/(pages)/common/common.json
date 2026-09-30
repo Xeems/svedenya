@@ -129,7 +129,57 @@
   {
     "sectionId": "ucred-info",
     "name": "Сведенья об учередителях",
-    "type": "verticalTable",
-    "data":[]
+    "type": "horizontalTable",
+    "headers": [
+      "Наименование учредителя",
+      "Адрес местонахождения учредителя(ей)",
+      "Контактные телефоны",
+      "Адрес электронной почты",
+      "Адрес сайта учредителя(ей) в сети «Интернет»"
+    ],
+    "data":[
+      {
+        "rowId": "ucred-data-row",
+        "rowItemProp": "uchredLaw",
+        "cells":[
+          {
+            "itemProp": "nameUchred",
+            "value":{
+              "type":"text",
+              "text": "Министерство науки и высшего образования Российской Федерации"
+            }
+          },
+          {
+            "itemProp": "addressUchred",
+            "value":{
+              "type":"text",
+              "text": "125993, г. Москва,  Тверская ул., д.11"
+            }
+          },
+          {
+            "itemProp": "telUchred",
+            "value":{
+              "type":"text",
+              "text": "+7 (495) 547-13-07 пн.-чт.: 9:00-18:00, пт.: 9:00-16:45"
+            }
+          },
+          {
+            "itemProp": "mailUchred",
+            "value":{
+              "type":"text",
+              "text": "info@minobrnauki.gov.ru;\npriem@minobrnauki.gov.ru"
+            }
+          },
+          {
+            "itemProp": "websiteUchred",
+            "value":{
+              "type":"link",
+              "text": "https://minobrnauki.gov.ru/",
+              "href": "https://minobrnauki.gov.ru/"
+            }
+          }
+        ]
+      }
+    ]
   }
 ]

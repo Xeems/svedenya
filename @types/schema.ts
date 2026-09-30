@@ -35,6 +35,7 @@ export interface HorizontalCell {
 
 export interface HorizontalRow {
   rowId: string;
+  rowItemProp: string; 
   cells: HorizontalCell[];
 }
 
@@ -42,9 +43,8 @@ export interface HorizontalTableSection {
   sectionId: string;
   name: string;
   type: "horizontalTable";
-  rowItemProp: string; // Корневой тег строки (например: vacant, teachingStaff)
   headers: string[];
-  rows: HorizontalRow[];
+  data: HorizontalRow[];
 }
 
 export type SectionSchema = VerticalTableSection | HorizontalTableSection;
