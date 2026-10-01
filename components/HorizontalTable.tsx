@@ -20,8 +20,8 @@ export default async function HorizontalTable(props: HorisontalTableProps) {
             {props.table.data.map((row, index) =>
                 <TableRow key={row.rowId + index} itemProp={row.rowItemProp}>
                     {row.cells.map((cell, index) =>
-                        <TableCell key={index + cell.value.text} >
-                            <ValueReader value={cell.value} itemProp={cell.itemProp}/> 
+                        <TableCell key={index + cell.text} >
+                            <ValueReader props={cell} /> 
                         </TableCell>
                     )}
                 </TableRow>

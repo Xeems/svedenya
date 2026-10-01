@@ -1,50 +1,58 @@
-export type TextValue = { type: "text"; text: string }
-export type LinkValue = { type: "link"; text: string; href: string }
-export type SignedDocValue = {
-  type: "signedDocument"
-  text: string
-  href: string
-  signHref?: string
+export type TextValue = { 
+  type: "text"; 
+  text: string; 
+  itemProp?: string;
+};
+
+export type LinkValue = Omit<TextValue, "type"> & {
+  type: "link"; 
+  href: string;
+};
+
+export type SignedDocValue = Omit<LinkValue, "type"> & {
+  type: "signedDocument";
+  signHref?: string;
   signInfo?: {
-    owner: string
-    dateSigning: string
-    issuer: string
-    hash: string
-  }
-}
+    owner: string;
+    dateSigning: string;
+    issuer: string;
+    hash: string;
+  };
+};
 
-export type PolymorphicValue = TextValue | LinkValue | SignedDocValue
+export type PolymorphicValue = TextValue | LinkValue | SignedDocValue;
 
-export interface VerticalField {
+
+export type VerticalField = {
   label: string;
-  itemProp: string;
-  value: PolymorphicValue;
-}
+} & PolymorphicValue;
 
 export interface VerticalTableSection {
   sectionId: string;
-  name: string;
+  name?: string;
   type: "verticalTable";
   data: VerticalField[];
-}
-
-export interface HorizontalCell {
-  itemProp: string;
-  value: PolymorphicValue;
 }
 
 export interface HorizontalRow {
   rowId: string;
   rowItemProp: string; 
-  cells: HorizontalCell[];
+  cells: PolymorphicValue[];
 }
 
 export interface HorizontalTableSection {
   sectionId: string;
-  name: string;
+  name?: string;
   type: "horizontalTable";
   headers: string[];
   data: HorizontalRow[];
 }
 
-export type SectionSchema = VerticalTableSection | HorizontalTableSection;
+export interface ListSection {
+  sectionId: string;
+  name?: string;
+  type: "list";
+  data: PolymorphicValue[];
+}
+
+export type SectionSchema = VerticalTableSection | HorizontalTableSection | ListSection;

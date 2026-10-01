@@ -1,3 +1,4 @@
+import { SignedDocValue } from "@/@types/schema"
 import { AwardIcon, FileIcon } from "lucide-react"
 import Link from "next/link"
 import React from "react"
@@ -10,16 +11,16 @@ type SignedDocumentProps = {
     children: React.ReactNode
 }
 
-export default async function SignedDocument(props : SignedDocumentProps) {
+export default async function SignedDocument(props : SignedDocValue) {
     return( 
     <span className="flex flex-row items-center w-fit gap-x-4">
         <Link 
             className="flex flex-row items-center gap-x-2 text-blue-500 hover:text-blue-600" 
-            href={props.documentHref}
+            href={props.href}
             itemProp={props.itemProp}>
                 <FileIcon className="size-6 shrink-0"/>
                 {/* {props.documentName} */}
-                {props.children}
+                {props.text}
         </Link>
         {props.signHref &&
             <Link href={props.signHref} itemProp={props.itemProp} className="group relative inline-block">

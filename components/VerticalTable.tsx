@@ -17,9 +17,8 @@ export default async function VerticalTable(props: VerticalTableProps) {
                 {row.label}
               </TableCell>
               <TableCell
-                {...(row.itemProp && { itemProp: row.itemProp})}
               >
-                <ValueReader value={row.value} itemProp={row.itemProp}/>
+                <ValueReader props={row} />
               </TableCell>
             </TableRow>
           );

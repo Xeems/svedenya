@@ -10,7 +10,7 @@ export default async function page() {
       <PageH1Header>Основные сведения</PageH1Header>
       {data.map((section) =>
         <section key={section.sectionId} className='space-y-4'>
-          <h2 className="text-xl font-semibold">{section.name}</h2>
+          {section.name &&<h2 className="text-xl font-semibold">{section.name}</h2>}
           <SectionParser section={section}/>
         </section>
       )}

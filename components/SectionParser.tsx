@@ -1,6 +1,7 @@
 import { SectionSchema } from "@/@types/schema";
 import VerticalTable from "./VerticalTable";
 import HorizontalTable from "./HorizontalTable";
+import List from "./List";
 
 
 export default async function SectionParser ({ section }: { section: SectionSchema }) {
@@ -10,6 +11,9 @@ export default async function SectionParser ({ section }: { section: SectionSche
         }
         case 'horizontalTable':{
             return <HorizontalTable table={section}/>
+        }
+        case 'list' :{
+            return <List list={section}/>
         }
     }
 }
