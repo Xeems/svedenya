@@ -1,0 +1,512 @@
+[
+    {
+        "sectionId": "education-programs-main",
+        "name": "Информация о реализуемых уровнях образования, о формах обучения, нормативных сроках обучения",
+        "type": "horizontalTable",
+        "headers": [
+            "Код",
+            "Наименование специальности / направления подготовки",
+            "Образовательная программа, направленность, профиль, шифр и наименование научной специальности",
+            "Уровень образования",
+            "Форма обучения",
+            "Нормативный срок обучения",
+            "Учебные предметы, курсы, дисциплины (модули), предусмотренные соответствующей образовательной программой",
+            "Практики, предусмотренные соответствующей образовательной программой"
+        ],
+        "data": [
+            {
+            "rowId": "program-3-2-1",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "3.2.1" },
+                { "type": "text", "itemProp": "eduName", "text": "Гигиена" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – аспирантура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "3 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-3-2-4",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "3.2.4" },
+                { "type": "text", "itemProp": "eduName", "text": "Медицина труда" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – аспирантура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "3 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-3-2-3",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "3.2.3" },
+                { "type": "text", "itemProp": "eduName", "text": "Общественное здоровье, организация и социология здравоохранения" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – аспирантура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "3 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-31-08-49",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.49" },
+                { "type": "text", "itemProp": "eduName", "text": "Терапия" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – ординатура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "2 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-31-08-44",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.44" },
+                { "type": "text", "itemProp": "eduName", "text": "Профпатология" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – ординатура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "2 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-31-08-42",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.42" },
+                { "type": "text", "itemProp": "eduName", "text": "Неврология" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – ординатура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "2 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-31-08-71",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.71" },
+                { "type": "text", "itemProp": "eduName", "text": "Организация здравоохранения и общественное здоровье" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование – ординатура" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "2 года" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            },
+            {
+            "rowId": "program-dpo-profpat",
+            "rowItemProp": "eduAccred",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "—" },
+                { "type": "text", "itemProp": "eduName", "text": "Повышение квалификации врачей по специальности «Профпатология»" },
+                { "type": "text", "itemProp": "eduProf", "text": "Образовательная программа" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Дополнительное профессиональное образование (ДПО)" },
+                { "type": "text", "itemProp": "eduForm", "text": "Очная / Очно-заочная" },
+                { "type": "text", "itemProp": "learningTerm", "text": "от 36 до 144 часов" },
+                { "type": "text", "itemProp": "eduPred", "text": "Учебные предметы, курсы, дисциплины" },
+                { "type": "text", "itemProp": "eduPrac", "text": "Практики" }
+            ]
+            }
+        ]
+    },
+    {
+        "sectionId": "edu-lan-doc",
+        "type": "signedDocument",
+        "href": "123",
+        "text": "Информация о языках, на которых осуществляется образование (обучение)",
+        "signHref": "123",
+        "signInfo": {
+            "owner": "string;",
+            "dateSigning": "string;",
+            "issuer": "string;",
+            "hash": "string;"
+        }
+    },
+    {
+        "sectionId": "education-documents-list",
+        "name": "Электронные документы подраздела «Образование»",
+        "type": "list",
+        "data": [
+            {
+            "type": "signedDocument",
+            "itemProp": "eduChislenEl",
+            "text": "Информация о численности обучающихся по реализуемым образовательным программам за счет бюджетных ассигнований",
+            "href": "123.pdf",
+            "signHref": "123.sig",
+            "signInfo": {
+                "owner": "",
+                "dateSigning": "",
+                "issuer": "",
+                "hash": ""
+            }
+            },
+            {
+            "type": "signedDocument",
+            "itemProp": "eduPriemEl",
+            "text": "Информация о результатах приема",
+            "href": "123.pdf",
+            "signHref": "123.sig",
+            "signInfo": {
+                "owner": "",
+                "dateSigning": "",
+                "issuer": "",
+                "hash": ""
+            }
+            },
+            {
+            "type": "signedDocument",
+            "itemProp": "eduPerevodEl",
+            "text": "Информация о результатах перевода, восстановления и отчисления",
+            "href": "123.pdf",
+            "signHref": "123.sig",
+            "signInfo": {
+                "owner": "",
+                "dateSigning": "",
+                "issuer": "",
+                "hash": ""
+            }
+            }
+        ]
+    },
+    {
+        "sectionId": "education-programs-list",
+        "name": "Информация об образовательной программе, в том числе об адаптированной образовательной программе",
+        "type": "horizontalTable",
+        "headers": [
+            "Код, шифр",
+            "Наименование профессии, специальности, направления подготовки, наименование группы научных специальностей",
+            "Уровень образования",
+            "Образовательные программы, направленность, профиль, шифр и наименование научной специальности",
+            "Реализуемые формы обучения",
+            "Образовательная программа в виде электронного документа",
+            "Учебный план",
+            "Рабочие программы (по каждой дисциплине)",
+            "Календарный учебный график"
+        ],
+        "data": [
+            {
+            "rowId": "program-row-31-08-42",
+            "rowItemProp": "eduOp",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.42" },
+                { "type": "text", "itemProp": "eduName", "text": "неврология" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование - подготовка кадров высшей квалификации" },
+                { "type": "text", "itemProp": "eduProf", "text": "31.08.42 неврология" },
+                { "type": "text", "itemProp": "eduForm", "text": "очная" },
+                {
+                "type": "signedDocument",
+                "itemProp": "opMain",
+                "text": "Открыть ООП",
+                "href": "/docs/oop-nevrology.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationPlan",
+                "text": "Скачать план",
+                "href": "/docs/plan-nevrology.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationRpd",
+                "text": "Перейти к РПД",
+                "href": "/docs/rpd-nevrology.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationShedule",
+                "text": "График",
+                "href": "/docs/schedule-nevrology.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                { "type": "text", "itemProp": "eduPr", "text": "не предусмотрено" },
+                { "type": "text", "itemProp": "methodology", "text": "не предусмотрено" }
+            ]
+            },
+            {
+            "rowId": "program-row-31-08-44",
+            "rowItemProp": "eduOp",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.44" },
+                { "type": "text", "itemProp": "eduName", "text": "профпатология" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование - подготовка кадров высшей квалификации" },
+                { "type": "text", "itemProp": "eduProf", "text": "31.08.44 профпатология" },
+                { "type": "text", "itemProp": "eduForm", "text": "очная" },
+                {
+                "type": "signedDocument",
+                "itemProp": "opMain",
+                "text": "Открыть ООП",
+                "href": "/docs/oop-profpatologia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationPlan",
+                "text": "Скачать план",
+                "href": "/docs/plan-profpatologia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationRpd",
+                "text": "Перейти к РПД",
+                "href": "/docs/rpd-profpatologia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationShedule",
+                "text": "График",
+                "href": "/docs/schedule-profpatologia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                { "type": "text", "itemProp": "eduPr", "text": "не предусмотрено" },
+                { "type": "text", "itemProp": "methodology", "text": "не предусмотрено" }
+            ]
+            },
+            {
+            "rowId": "program-row-31-08-49",
+            "rowItemProp": "eduOp",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.49" },
+                { "type": "text", "itemProp": "eduName", "text": "терапия" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование - подготовка кадров высшей квалификации" },
+                { "type": "text", "itemProp": "eduProf", "text": "терапия" },
+                { "type": "text", "itemProp": "eduForm", "text": "очная" },
+                {
+                "type": "signedDocument",
+                "itemProp": "opMain",
+                "text": "Открыть ООП",
+                "href": "/docs/oop-terapia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationPlan",
+                "text": "Скачать план",
+                "href": "/docs/plan-terapia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationRpd",
+                "text": "Перейти к РПД",
+                "href": "/docs/rpd-terapia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationShedule",
+                "text": "График",
+                "href": "/docs/schedule-terapia.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                }
+                ,
+                { "type": "text", "itemProp": "eduPr", "text": "не предусмотрено" },
+                { "type": "text", "itemProp": "methodology", "text": "не предусмотрено" }
+            ]
+            },
+            {
+            "rowId": "program-row-32-04",
+            "rowItemProp": "eduOp",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "32.04" },
+                { "type": "text", "itemProp": "eduName", "text": "Медицина труда" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Высшее образование - подготовка научно-педагогических кадров" },
+                { "type": "text", "itemProp": "eduProf", "text": "32.04 медицина труда" },
+                { "type": "text", "itemProp": "eduForm", "text": "очная" },
+                { "type": "signedDocument", "itemProp": "opMain", "text": "Открыть ООП", "href": "/docs/oop-medtruda.pdf", "signHref": "",
+                    "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                { "type": "signedDocument", "itemProp": "educationPlan", "text": "Скачать план", "href": "/docs/plan-medtruda.pdf", "signHref": "",
+                    "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationRpd",
+                "text": "Перейти к РПД",
+                "href": "/docs/rpd-medtruda.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                {
+                "type": "signedDocument",
+                "itemProp": "educationShedule",
+                "text": "График",
+                "href": "/docs/schedule-medtruda.pdf",
+                "signHref": "",
+                "signInfo": { "owner": "", "dateSigning": "", "issuer": "", "hash": "" }
+                },
+                { "type": "text", "itemProp": "eduPr", "text": "не предусмотрено" },
+                { "type": "text", "itemProp": "methodology", "text": "не предусмотрено" }
+            ]
+            }
+        ]
+    },
+    {
+        "sectionId": "education-nir-list",
+        "name": "Информация о направлениях и результатах научной (научно-исследовательской) деятельности",
+        "type": "horizontalTable",
+        "headers": [
+            "Код, шифр",
+            "Наименование специальности, направления подготовки, наименование группы научных специальностей",
+            "Перечень научных направлений, в рамках которых ведется научная (научно-исследовательская) деятельность",
+            "Образовательная программа, направленность, профиль, шифр и наименование научной специальности",
+            "Уровень образования",
+            "Название научного направления/научной школы",
+            "Результаты научной (научно-исследовательской) деятельности",
+            "Сведения о научно-исследовательской базе для осуществления научной (научно-исследовательской) деятельность"
+        ],
+        "data": [
+            {
+            "rowId": "nir-row-3-2-4",
+            "rowItemProp": "eduNir",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "3.2.4" },
+                { "type": "text", "itemProp": "eduName", "text": "Медицина труда" },
+                { "type": "text", "itemProp": "perechenNir", "text": "—" },
+                { "type": "text", "itemProp": "eduProf", "text": "—" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Аспирантура" },
+                { "type": "text", "itemProp": "napravNir", "text": "—" },
+                { "type": "text", "itemProp": "resultNir", "text": "—" },
+                { "type": "text", "itemProp": "baseNir", "text": "—" }
+            ]
+            },
+            {
+            "rowId": "nir-row-31-08-42",
+            "rowItemProp": "eduNir",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.42" },
+                { "type": "text", "itemProp": "eduName", "text": "Неврология" },
+                { "type": "text", "itemProp": "perechenNir", "text": "—" },
+                { "type": "text", "itemProp": "eduProf", "text": "—" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Ординатура" },
+                { "type": "text", "itemProp": "napravNir", "text": "—" },
+                { "type": "text", "itemProp": "resultNir", "text": "—" },
+                { "type": "text", "itemProp": "baseNir", "text": "—" }
+            ]
+            },
+            {
+            "rowId": "nir-row-31-08-44",
+            "rowItemProp": "eduNir",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.44" },
+                { "type": "text", "itemProp": "eduName", "text": "Профпатология" },
+                { "type": "text", "itemProp": "perechenNir", "text": "—" },
+                { "type": "text", "itemProp": "eduProf", "text": "—" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Ординатура" },
+                { "type": "text", "itemProp": "napravNir", "text": "—" },
+                { "type": "text", "itemProp": "resultNir", "text": "—" },
+                { "type": "text", "itemProp": "baseNir", "text": "—" }
+            ]
+            },
+            {
+            "rowId": "nir-row-31-08-49",
+            "rowItemProp": "eduNir",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.49" },
+                { "type": "text", "itemProp": "eduName", "text": "Терапия" },
+                { "type": "text", "itemProp": "perechenNir", "text": "—" },
+                { "type": "text", "itemProp": "eduProf", "text": "—" },
+                { "type": "text", "itemProp": "eduLevel", "text": "Ординатура" },
+                { "type": "text", "itemProp": "napravNir", "text": "—" },
+                { "type": "text", "itemProp": "resultNir", "text": "—" },
+                { "type": "text", "itemProp": "baseNir", "text": "—" }
+            ]
+            }
+        ]
+    },
+    {
+        "sectionId": "education-graduate-job-list",
+        "name": "Информация о трудоустройстве выпускников образовательных организаций за прошлый учебный год",
+        "type": "horizontalTable",
+        "headers": [
+            "Код, шифр",
+            "Наименование профессии, специальности, направления подготовки наименование группы научных специальностей",
+            "Образовательная программа, направленность, профиль, шифр и наименование научной специальности",
+            "Количество выпускников",
+            "Количество трудоустроенных выпускников"
+        ],
+        "data": [
+            {
+            "rowId": "graduate-row-3-2-4",
+            "rowItemProp": "graduateJob",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "3.2.4" },
+                { "type": "text", "itemProp": "eduName", "text": "Медицина труда" },
+                { "type": "text", "itemProp": "eduProf", "text": "Медицина труда" },
+                { "type": "text", "itemProp": "v1", "text": "1" },
+                { "type": "text", "itemProp": "t1", "text": "1" }
+            ]
+            },
+            {
+            "rowId": "graduate-row-31-08-42",
+            "rowItemProp": "graduateJob",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.42" },
+                { "type": "text", "itemProp": "eduName", "text": "Неврология" },
+                { "type": "text", "itemProp": "eduProf", "text": "Неврология" },
+                { "type": "text", "itemProp": "v1", "text": "1" },
+                { "type": "text", "itemProp": "t1", "text": "1" }
+            ]
+            },
+            {
+            "rowId": "graduate-row-31-08-44",
+            "rowItemProp": "graduateJob",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.44" },
+                { "type": "text", "itemProp": "eduName", "text": "Профпатология" },
+                { "type": "text", "itemProp": "eduProf", "text": "Профпатология" },
+                { "type": "text", "itemProp": "v1", "text": "3" },
+                { "type": "text", "itemProp": "t1", "text": "3" }
+            ]
+            },
+            {
+            "rowId": "graduate-row-31-08-49",
+            "rowItemProp": "graduateJob",
+            "cells": [
+                { "type": "text", "itemProp": "eduCode", "text": "31.08.49" },
+                { "type": "text", "itemProp": "eduName", "text": "Терапия" },
+                { "type": "text", "itemProp": "eduProf", "text": "Терапия" },
+                { "type": "text", "itemProp": "v1", "text": "0" },
+                { "type": "text", "itemProp": "t1", "text": "0" }
+            ]
+            }
+        ]
+    }
+
+
+]

@@ -55,4 +55,9 @@ export interface ListSection {
   data: PolymorphicValue[];
 }
 
-export type SectionSchema = VerticalTableSection | HorizontalTableSection | ListSection;
+export type PolymorphicValueSection = PolymorphicValue & {
+  name?: string
+  sectionId: string
+} 
+
+export type SectionSchema = VerticalTableSection | HorizontalTableSection | ListSection | PolymorphicValueSection;

@@ -2,6 +2,7 @@ import { SectionSchema } from "@/@types/schema";
 import VerticalTable from "./VerticalTable";
 import HorizontalTable from "./HorizontalTable";
 import List from "./List";
+import SignedDocument from "./SignedDocument";
 
 
 export default async function SectionParser ({ section }: { section: SectionSchema }) {
@@ -14,6 +15,9 @@ export default async function SectionParser ({ section }: { section: SectionSche
         }
         case 'list' :{
             return <List list={section}/>
+        }
+        case "signedDocument":{
+            return <SignedDocument itemProp={section.itemProp} href={section.href} text={section.text} signHref={section.signHref} type={section.type}/>
         }
     }
 }
