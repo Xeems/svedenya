@@ -133,6 +133,7 @@
         "type": "signedDocument",
         "href": "123",
         "text": "Информация о языках, на которых осуществляется образование (обучение)",
+        "itemProp": "languageEl",
         "signHref": "123",
         "signInfo": {
             "owner": "string;",
@@ -506,7 +507,19 @@
             ]
             }
         ]
+    },
+    {
+        "sectionId": "edu-acred-doc",
+        "type": "signedDocument",
+        "href": "123",
+        "text": "Информация о наличии государственной аккредитации образовательной деятельности по реализуемым образовательным программам",
+        "itemProp": "accreditationDocLink",
+        "signHref": "123",
+        "signInfo": {
+            "owner": "string;",
+            "dateSigning": "string;",
+            "issuer": "string;",
+            "hash": "string;"
+        }
     }
-
-
 ]

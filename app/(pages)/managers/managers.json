@@ -1,0 +1,86 @@
+[
+  {
+    "sectionId": "leadership-main",
+    "name": "Информация о руководителях образовательной организации",
+    "type": "horizontalTable",
+    "headers": [
+      "Ф.И.О.",
+      "Должность",
+      "Контактные телефоны",
+      "Адреса электронной почты"
+    ],
+    "data": [
+      {
+        "rowId": "leader-main-1",
+        "rowItemProp": "rucovodstvo",
+        "cells": [
+          { "type": "text", "itemProp": "fio", "text": "Коротенко Ольга Юрьевна" },
+          { "type": "text", "itemProp": "post", "text": "ИО директора института" },
+          { "type": "text", "itemProp": "telephone", "text": "8(3843)796-979" },
+          { 
+            "type": "link", 
+            "itemProp": "email", 
+            "text": "niikpgpz@mail.ru", 
+            "href": "mailto:niikpgpz@mail.ru" 
+          }
+        ]
+      },
+      {
+        "rowId": "leader-deputy-1",
+        "rowItemProp": "rucovodstvoZam",
+        "cells": [
+          { "type": "text", "itemProp": "fio", "text": "Филимонов Егор Сергеевич" },
+          { "type": "text", "itemProp": "post", "text": "Заместитель директора по научной работе" },
+          { "type": "text", "itemProp": "telephone", "text": "8(3843)796-623" },
+          { 
+            "type": "link", 
+            "itemProp": "email", 
+            "text": "filimonov_es@nii-kpg.ru", 
+            "href": "mailto:filimonov_es@nii-kpg.ru" 
+          }
+        ]
+      },
+      {
+        "rowId": "leader-deputy-2",
+        "rowItemProp": "rucovodstvoZam",
+        "cells": [
+          { "type": "text", "itemProp": "fio", "text": "Корсакова Татьяна Георгиевна" },
+          { "type": "text", "itemProp": "post", "text": "Ученый секретарь" },
+          { "type": "text", "itemProp": "telephone", "text": "8 (384-3) 796-565" },
+          { 
+            "type": "link", 
+            "itemProp": "email", 
+            "text": "korsakovatg@nii-kpg.ru", 
+            "href": "mailto:korsakovatg@nii-kpg.ru" 
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "leadership-branches-table",
+    "name": "Информация о руководителях филиалов образовательной организации",
+    "type": "horizontalTable",
+    "rowItemProp": "rucovodstvoFil",
+    "headers": [
+      "Наименование филиала образовательной организации",
+      "Фамилия, имя, отчество руководителя филиала",
+      "Должность",
+      "Контактные телефоны",
+      "Адрес электронной почты"
+    ],
+    "data": [
+      {
+        "rowId": "leader-branch-none",
+        "rowItemProp": "rucovodstvoFil",
+        "cells": [
+          { "type": "text", "itemProp": "nameFil", "text": "Филиалы отсутствуют" },
+          { "type": "text", "itemProp": "fio", "text": "—" },
+          { "type": "text", "itemProp": "post", "text": "—" },
+          { "type": "text", "itemProp": "telephone", "text": "—" },
+          { "type": "text", "itemProp": "email", "text": "—" }
+        ]
+      }
+    ]
+  }
+]
