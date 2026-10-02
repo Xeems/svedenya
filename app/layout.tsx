@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Noto_Sans, Playfair_Display } from "next/font/google";
+import { Roboto, Noto_Sans, Playfair_Display, Geist } from "next/font/google";
 import "./globals.css";
 import SideNav from "@/components/SideNav";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,10 @@ const roboto = Roboto({
   display: 'swap',
 });
 
+const geist = Geist({
+  subsets: ['latin', 'cyrillic'],
+})
+
 export const metadata: Metadata = {
   title: "Сведения об образовательной организации",
 };
@@ -22,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ru" 
-      className={cn("h-full", "antialiased", roboto.className, notoSans.variable, playfairDisplayHeading.variable)}
+      className={cn("h-full", "antialiased", geist.className)}
     >
       <body className="min-h-full w-full bg-background text-foreground antialiased ">
         <SidebarProvider>

@@ -2,153 +2,159 @@
 "use client"
 
 import React, { useState } from "react"
-import { Plus, Trash2, Settings, Save } from "lucide-react"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import PolymorphicFieldEditor from "./PolymorphicFieldEditor"
-import { SectionSchema } from "@/@types/schema"
+import AdminHeader from "./AdminHeader"
+import SectionWrapper from "./SectionWrapper"
+import VerticalTableEditor from "./VerticalTableEditor"
+import HorizontalTableEditor from "./HorizontalTableEditor"
+import ListEditor from "./ListEditor"
+import { PolymorphicValue, SectionSchema } from "@/@types/schema"
 import { saveSectionData } from "@/actions/save-action"
-//import { saveSectionData } from "@/app/actions/save-action" // Наш Server Action
+import PolymorphicFieldEditor from "./PolymorphicFieldEditor"
+import PolymorphicSectionEditor from "./PolymorphicSectionEditor"
 
-export default function UniversalAdminEngine({ initialData, pageFile }: { initialData: SectionSchema[], pageFile: string }) {
+interface UniversalAdminEngineProps {
+  initialData: SectionSchema[]
+  pageFile: string
+  pageSlug: string 
+}
+
+export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }: UniversalAdminEngineProps) {
   const [sections, setSections] = useState<SectionSchema[]>(initialData)
 
-  // 1. Изменение ячейки в горизонтальной таблице
-  const updateHorizontalCell = (sectionId: string, rowId: string, cellIdx: number, updatedCell: any) => {
-    setSections(sections.map(sec => {
-      if (sec.sectionId === sectionId && sec.type === "horizontalTable") {
-        return {
-          ...sec,
-          data: sec.data.map(row => {
-            if (row.rowId === rowId) {
-              const newCells = [...row.cells]
-              newCells[cellIdx] = updatedCell
-              return { ...row, cells: newCells }
-            }
-            return row
-          })
-        }
-      }
-      return sec
-    }))
+  const handleAddSection = (type: "verticalTable" | "horizontalTable" | "list") => {
+    const newSectionId = "section-" + crypto.randomUUID()
+    const base = { sectionId: newSectionId, name: "Новая секция", type } as any
+    if (type === "verticalTable") base.data = []
+    else if (type === "horizontalTable") { base.headers = ["Колонка 1"]; base.data = [] }
+    else base.data = []
+    setSections([...sections, base])
   }
 
-  // 2. Добавление новой строки в горизонтальную таблицу
-  const addRow = (sectionId: string, headersCount: number) => {
-    setSections(sections.map(sec => {
-      if (sec.sectionId === sectionId && sec.type === "horizontalTable") {
-        const newRow = {
-          rowId: "row-" + crypto.randomUUID(),
-          rowItemProp: sec.rowItemProp || "",
-          cells: Array.from({ length: headersCount }, () => ({
-            type: "text",
-            text: "—",
-            itemProp: ""
-          }))
-        }
-        return { ...sec, data: [...sec.data, newRow] }
-      }
-      return sec
-    }))
+const handleSave = async () => {
+  // Передаем pageSlug вместо имени файла, чтобы сервер сам определил правильную папку роута
+  const result = await saveSectionData(pageFile, sections)
+  if (result.success) {
+    alert("Изменения успешно сохранены! Публичная страница обновлена.")
+  } else {
+    alert("Ошибка сохранения: " + result.error)
   }
-
-  // 3. Удаление строки
-  const deleteRow = (sectionId: string, rowId: string) => {
-    setSections(sections.map(sec => {
-      if (sec.sectionId === sectionId && sec.type === "horizontalTable") {
-        return { ...sec, data: sec.data.filter(row => row.rowId !== rowId) }
-      }
-      return sec
-    }))
-  }
-
-  // 4. Отправка итогового стейта на сервер в Server Action
-  const handleSave = async () => {
-    const result = await saveSectionData(pageFile, sections)
-    if (result.success) {
-      alert("Данные успешно сохранены! Статический HTML пересобран.")
-    } else {
-      alert("Ошибка при сохранении: " + result.error)
-    }
-  }
+}
 
   return (
-    <div className="w-full space-y-8 max-w-5xl mx-auto p-6 bg-white rounded-xl border">
-      <div className="flex justify-between items-center border-b pb-4">
-        <h1 className="text-xl font-bold text-slate-800">Режим редактирования структуры</h1>
-        <Button onClick={handleSave} className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-x-1">
-          <Save className="size-4" /> Сохранить файл {pageFile}
-        </Button>
-      </div>
+    <div className="w-full space-y-8 mx-auto p-6 bg-white rounded-xl border shadow-sm">
+      <AdminHeader pageFile={pageFile} onAddSection={handleAddSection} onSave={handleSave} />
 
-      {sections.map((section) => {
-        if (section.type === "horizontalTable") {
-          return (
-            <div key={section.sectionId} className="space-y-3 border p-4 rounded-xl">
-              <div className="flex justify-between items-center">
-                <Input 
-                  value={section.name || ""} 
-                  onChange={(e) => setSections(sections.map(s => s.sectionId === section.sectionId ? { ...s, name: e.target.value } : s))}
-                  className="font-semibold text-base w-[60%] h-8"
-                />
-                <Button size="sm" variant="outline" onClick={() => addRow(section.sectionId, section.headers.length)}>
-                  <Plus className="size-4 mr-1" /> Добавить строку
-                </Button>
-              </div>
+      {sections.map((section, sIdx) => (
+        <SectionWrapper
+          key={section.sectionId}
+          name={section.name || ""}
+          type={section.type}
+          isFirst={sIdx === 0}
+          isLast={sIdx === sections.length - 1}
+          onNameChange={(newName) => setSections(sections.map(s => s.sectionId === section.sectionId ? { ...s, name: newName } : s))}
+          onTypeChange={(newType) => setSections(sections.map(s => s.sectionId === section.sectionId ? { ...s, type: newType, data: [] } as any : s))}
+          onDelete={() => setSections(sections.filter(s => s.sectionId !== section.sectionId))}
+          onMove={(dir) => {
+            const next = [...sections]; const target = dir === "up" ? sIdx - 1 : sIdx + 1
+            const temp = next[sIdx]; next[sIdx] = next[target]; next[target] = temp; setSections(next)
+          }}
+        >
+          {section.type === "verticalTable" && (
+            <VerticalTableEditor 
+              data={section.data} 
+              onFieldChange={(fIdx, updated) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: s.data.map((f, i) => i === fIdx ? updated : f) } : s))}
+              onAddField={() => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: [...s.data, { label: "Новое поле", type: "text", text: "—" }] } : s))}
+              onDeleteField={(fIdx) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: s.data.filter((_, i) => i !== fIdx) } : s))}
+            />
+          )}
 
-              <div className="rounded-md border overflow-hidden">
-                <Table>
-                  <TableHeader className="bg-slate-50">
-                    <TableRow>
-                      {section.headers.map((h, i) => <TableHead key={i}>{h}</TableHead>)}
-                      <TableHead className="w-[80px]"></TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {section.data.map((row) => (
-                      <TableRow key={row.rowId}>
-                        {row.cells.map((cell: any, cellIdx) => (
-                          <TableCell key={cellIdx} className="p-2 align-top text-xs relative max-w-[150px] truncate">
-                            <div className="group flex items-center justify-between gap-x-1 border p-1 rounded bg-slate-50/50">
-                              <span className="truncate">{cell.text || "—"}</span>
-                              
-                              {/* Модальное окно настройки ячейки, её типа и itemprop */}
-                              <Dialog>
-                                <DialogTrigger asChild>
-                                  <Button size="icon" variant="ghost" className="h-6 w-6 opacity-60 hover:opacity-100">
-                                    <Settings className="size-3" />
-                                  </Button>
-                                </DialogTrigger>
-                                <DialogContent className="sm:max-w-[450px]">
-                                  <DialogHeader>
-                                    <DialogTitle>Настройка параметров ячейки</DialogTitle>
-                                  </DialogHeader>
-                                  <PolymorphicFieldEditor 
-                                    cell={cell} 
-                                    onChange={(updated) => updateHorizontalCell(section.sectionId, row.rowId, cellIdx, updated)}
-                                  />
-                                </DialogContent>
-                              </Dialog>
-                            </div>
-                          </TableCell>
-                        ))}
-                        <TableCell className="p-2">
-                          <Button size="icon" variant="ghost" className="text-red-500 h-7 w-7" onClick={() => deleteRow(section.sectionId, row.rowId)}>
-                            <Trash2 className="size-4" />
-                          </Button>
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
-            </div>
-          )
-        }
-        return null
-      })}
+          {section.type === "horizontalTable" && (
+            <HorizontalTableEditor 
+              sectionId={section.sectionId}
+              headers={section.headers || []}
+              rows={section.data || []} // Помним, что в типах массив строк лежит в свойстве data
+              
+              onHeadersChange={(h) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, headers: h } : s))}
+              
+              onRowItemPropChange={(rId, newProp) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  return { ...s, data: s.data.map(r => r.rowId === rId ? { ...r, rowItemProp: newProp } : r) }
+                }
+                return s
+              }))}
+              
+              onCellChange={(rId, cIdx, updated) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  return { ...s, data: s.data.map(r => r.rowId === rId ? { ...r, cells: r.cells.map((c, i) => i === cIdx ? updated : c) } : r) }
+                }
+                return s
+              }))}
+              
+              onAddRow={() => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  const currentHeadersLength = s.headers?.length || 1
+                  return { 
+                    ...s, 
+                    data: [...(s.data || []), { 
+                      rowId: "row-" + crypto.randomUUID(), 
+                      rowItemProp: "", 
+                      cells: Array.from({ length: currentHeadersLength }, () => ({ type: "text", text: "—", itemProp: "" })) 
+                    }] 
+                  }
+                }
+                return s
+              }))}
+              
+              onDeleteRow={(rId) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, data: s.data.filter(r => r.rowId !== rId) } : s))}
+              
+              onAddColumn={() => setSections(sections.map(s => {
+                  if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                      const newHeaders = [...(s.headers || []), `Колонка ${(s.headers?.length || 0) + 1}`]
+                      const newData = (s.data || []).map(row => ({
+                      ...row,
+                      cells: [...row.cells, { 
+                          type: "text" as const, 
+                          text: "—", 
+                          itemProp: "" 
+                      } as PolymorphicValue]
+                      }))
+                      return { ...s, headers: newHeaders, data: newData }
+                  }
+                  return s
+                  }))}
+              
+              // НАСТРОЙКА: Удаление столбца и вырезание ячейки по индексу из всех строк
+              onDeleteColumn={(colIdx) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  const newHeaders = (s.headers || []).filter((_, i) => i !== colIdx)
+                  const newData = (s.data || []).map(row => ({
+                    ...row,
+                    cells: row.cells.filter((_, i) => i !== colIdx) // Вырезаем ячейку из массива по индексу удаленного столбца
+                  }))
+                  return { ...s, headers: newHeaders, data: newData }
+                }
+                return s
+              }))}
+            />
+          )}
+
+          {section.type === "list" && (
+            <ListEditor 
+              data={section.data}
+              onItemChange={(iIdx, updated) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: s.data.map((item, i) => i === iIdx ? updated : item) } : s))}
+              onAddItem={() => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: [...s.data, { type: "text", text: "Новая запись" }] } : s))}
+              onDeleteItem={(iIdx) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: s.data.filter((_, i) => i !== iIdx) } : s))}
+            />
+          )}
+
+          {(section.type === "link" || section.type === "text" || section.type === "signedDocument") &&(
+            <PolymorphicSectionEditor
+              section={section}
+              onChange={(updatedSection) => setSections(sections.map(s => s.sectionId === section.sectionId ? updatedSection : s))}
+            />
+          )}
+        </SectionWrapper>
+      ))}
     </div>
   )
 }

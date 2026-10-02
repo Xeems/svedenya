@@ -7,6 +7,7 @@ import { revalidatePath } from "next/cache"
 import { SectionSchema } from "@/@types/schema"
 
 export async function saveSectionData(fileName: string, updatedData: SectionSchema[]) {
+  console.log(fileName, )
   try {
     // 1. Строим абсолютный путь к файлу (например: src/data/basic-info.json)
     const dataDirectory = path.join(process.cwd(), "app/(pages)/common/")
