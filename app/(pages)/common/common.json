@@ -95,7 +95,7 @@
         "itemProp": "addressPlaceOppo",
         "type": "text",
         "text": "не реализуется"
-      }         
+      }
     ]
   },
   {
@@ -139,6 +139,37 @@
             "type": "link",
             "text": "https://minobrnauki.gov.ru/",
             "href": "https://minobrnauki.gov.ru/"
+          }
+        ]
+      },
+      {
+        "rowId": "row-16829689-aced-4f62-b01e-972518b30df7",
+        "rowItemProp": "",
+        "cells": [
+          {
+            "type": "text",
+            "text": "312",
+            "itemProp": "123"
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
           }
         ]
       }
