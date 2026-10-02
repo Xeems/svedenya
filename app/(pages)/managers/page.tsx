@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Руководство",
 };
 
-export default function page() {
+export default function ManagerPage() {
    const data = managersData as SectionSchema[]
   return (
     <main className="flex flex-col gap-y-8">

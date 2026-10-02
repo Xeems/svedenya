@@ -1,0 +1,85 @@
+[
+  {
+    "sectionId": "financial-volume-table",
+    "name": "Объем образовательной деятельности, финансовое обеспечение которой осуществляется:",
+    "type": "horizontalTable",
+    "headers": [
+      "Год",
+      "за счет бюджетных ассигнований федерального бюджета (тыс. руб.)",
+      "за счет бюджетов субъектов Российской Федерации (тыс. руб.)",
+      "за счет местных бюджетов (тыс. руб.)",
+      "по договорам об оказании платных образовательных услуг (тыс. руб.)"
+    ],
+    "data": [
+      {
+        "rowId": "volume-2025",
+        "rowItemProp": "",
+        "cells": [
+          { "type": "text", "text": "2025 г." },
+          { "type": "text", "itemProp": "finBFVolume", "text": "2020.0" },
+          { "type": "text", "itemProp": "finBRVolume", "text": "0" },
+          { "type": "text", "itemProp": "finBMVolume", "text": "0" },
+          { "type": "text", "itemProp": "finPVolume", "text": "0" }
+        ]
+      },
+      {
+        "rowId": "volume-2026",
+        "rowItemProp": "",
+        "cells": [
+          { "type": "text", "text": "2026 г." },
+          { "type": "text", "itemProp": "finBFVolume", "text": "2999.8" },
+          { "type": "text", "itemProp": "finBRVolume", "text": "0" },
+          { "type": "text", "itemProp": "finBMVolume", "text": "0" },
+          { "type": "text", "itemProp": "finPVolume", "text": "0" }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "financial-reports-table",
+    "name": "Сведения о поступлении финансовых и материальных средств и об их расходах",
+    "type": "horizontalTable",
+    "rowItemProp": "volume",
+    "headers": [
+      "Год",
+      "Поступившие финансовые и материальные средства",
+      "Расходованные финансовые и материальные средства"
+    ],
+    "data": [
+      {
+        "rowId": "report-2025",
+        "rowItemProp": "volume",
+        "cells": [
+          { "type": "text", "itemProp": "finYear", "text": "2025" },
+          { "type": "text", "itemProp": "finPost", "text": "—" },
+          { "type": "text", "itemProp": "finRas", "text": "—" }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "financial-documents-list",
+    "name": "План финансово-хозяйственной деятельности образовательной организации, утвержденный в установленном законодательством Российской Федерации порядке, или бюджетная смета образовательной организации",
+    "type": "list",
+    "data": [
+      {
+        "type": "signedDocument",
+        "itemProp": "finPlanDocLink",
+        "text": "План финансово-хозяйственной деятельности образовательной организации",
+        "href": "321.pdf",
+        "signHref": "321.sig",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "link",
+        "text": "Ссылка на информацию на bus.gov.ru в соответствии с Федеральным законом № 83-ФЗ",
+        "href": "https://bus.gov.ru/info-card/337328"
+      }
+    ]
+  }
+]

@@ -1,4 +1,10 @@
 import PageH1Header from "@/components/PageH1Header";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Платные образовательные услуги",
+};
 
 export default function PaidEduPage() {
   return (
