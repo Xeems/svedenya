@@ -63,7 +63,7 @@ export default function HorizontalTableEditor({
         <Table>
           <TableHeader >
             <TableRow>
-              <TableHead className="w-[140px] p-2 font-mono text-[10px] text-slate-500 bg-slate-100/30 border-r align-middle">
+              <TableHead className="w-35 p-2 font-mono text-[10px] text-slate-500 bg-slate-100/30 border-r align-middle">
                 Микроразметка строки
               </TableHead>
               
@@ -73,7 +73,7 @@ export default function HorizontalTableEditor({
                 return (
                   <TableHead 
                     key={sectionId + "-h-" + hIdx} 
-                    className={`p-2 min-w-[150px] relative group/header border-r last:border-r-0 ${
+                    className={`p-2 min-w-37.5 relative group/header border-r last:border-r-0 ${
                       isColHidden ? "bg-amber-50/40 border-amber-200" : ""
                     }`}
                   >
