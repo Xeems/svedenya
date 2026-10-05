@@ -22,6 +22,7 @@ export function middleware(request: NextRequest) {
   const isPrivateRoute = PRIVATE_ROUTES.some(route => pathname.startsWith(route))
 
   if (isPrivateRoute) {
+    //@ts-ignore
     const ip = request.ip || request.headers.get('x-forwarded-for')?.split(',')[0] || ''
 
 

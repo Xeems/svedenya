@@ -37,7 +37,7 @@ export default async function DynamicAdminPage({ params }: AdminPageProps) {
 
   return (
     <div className="flex min-h-screen">
-      <main className="flex-1 p-8 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto">
         <UniversalAdminEngine 
           initialData={initialData} 
           pageFile={pageInfo.jsonFileName} 

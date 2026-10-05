@@ -2,6 +2,7 @@ export type TextValue = {
   type: "text"; 
   text: string; 
   itemProp?: string;
+  hidden?: boolean
 };
 
 export type LinkValue = Omit<TextValue, "type"> & {
@@ -32,12 +33,14 @@ export interface VerticalTableSection {
   name?: string;
   type: "verticalTable";
   data: VerticalField[];
+  hidden: boolean;
 }
 
 export interface HorizontalRow {
   rowId: string;
   rowItemProp: string; 
   cells: PolymorphicValue[];
+  hidden?: boolean
 }
 
 export interface HorizontalTableSection {
@@ -45,7 +48,9 @@ export interface HorizontalTableSection {
   name?: string;
   type: "horizontalTable";
   headers: string[];
+  hiddenColumns?: boolean[];
   data: HorizontalRow[];
+  hidden?: boolean
 }
 
 export interface ListSection {
@@ -53,6 +58,7 @@ export interface ListSection {
   name?: string;
   type: "list";
   data: PolymorphicValue[];
+  hidden?: boolean
 }
 
 export type PolymorphicValueSection = PolymorphicValue & {

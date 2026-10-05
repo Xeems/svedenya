@@ -27,7 +27,7 @@ export const ADMIN_PAGES: Record<string, AdminPageInfo> = {
     slug: "common",
     title: "Основные сведения",
     folderName: "common",
-    jsonFileName: "common.json", // Название вашего файла в этой папке
+    jsonFileName: "common.json", 
     publicHref: "/sveden/common"
   },
   "document": {

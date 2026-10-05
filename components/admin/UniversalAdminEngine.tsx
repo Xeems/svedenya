@@ -9,7 +9,6 @@ import HorizontalTableEditor from "./HorizontalTableEditor"
 import ListEditor from "./ListEditor"
 import { PolymorphicValue, SectionSchema } from "@/@types/schema"
 import { saveSectionData } from "@/actions/save-action"
-import PolymorphicFieldEditor from "./PolymorphicFieldEditor"
 import PolymorphicSectionEditor from "./PolymorphicSectionEditor"
 
 interface UniversalAdminEngineProps {
@@ -19,6 +18,7 @@ interface UniversalAdminEngineProps {
 }
 
 export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }: UniversalAdminEngineProps) {
+  console.log(pageFile, pageSlug)
   const [sections, setSections] = useState<SectionSchema[]>(initialData)
 
   const handleAddSection = (type: "verticalTable" | "horizontalTable" | "list") => {
@@ -32,7 +32,7 @@ export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }
 
 const handleSave = async () => {
   // Передаем pageSlug вместо имени файла, чтобы сервер сам определил правильную папку роута
-  const result = await saveSectionData(pageFile, sections)
+  const result = await saveSectionData(pageSlug, pageFile, sections)
   if (result.success) {
     alert("Изменения успешно сохранены! Публичная страница обновлена.")
   } else {
@@ -41,7 +41,7 @@ const handleSave = async () => {
 }
 
   return (
-    <div className="w-full space-y-8 mx-auto p-6 bg-white rounded-xl border shadow-sm">
+    <div className="w-full space-y-8 mx-auto bg-white rounded-xl shadow-sm">
       <AdminHeader pageFile={pageFile} onAddSection={handleAddSection} onSave={handleSave} />
 
       {sections.map((section, sIdx) => (
@@ -58,6 +58,8 @@ const handleSave = async () => {
             const next = [...sections]; const target = dir === "up" ? sIdx - 1 : sIdx + 1
             const temp = next[sIdx]; next[sIdx] = next[target]; next[target] = temp; setSections(next)
           }}
+          typeHidden={section.hidden}
+          onToggleHidden={() => setSections(sections.map((s) => s.sectionId === section.sectionId ? {...s, hidden: !s.hidden} : s))}
         >
           {section.type === "verticalTable" && (
             <VerticalTableEditor 

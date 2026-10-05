@@ -5,16 +5,20 @@ import React from "react"
 import { ArrowUp, ArrowDown, Trash2, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Eye, EyeOff } from "lucide-react"
+import { cn } from "cn"
 
 interface SectionWrapperProps {
   name: string
   type: "verticalTable" | "horizontalTable" | "list" | "signedDocument" | "link" | "text"
   isFirst: boolean
   isLast: boolean
+  typeHidden?: boolean
   onNameChange: (newName: string) => void
   onTypeChange: (newType: "verticalTable" | "horizontalTable" | "list") => void
   onMove: (direction: "up" | "down") => void
   onDelete: () => void
+  onToggleHidden: () => void
   children: React.ReactNode
 }
 
@@ -25,12 +29,14 @@ export default function SectionWrapper({
   isLast,
   onNameChange,
   onTypeChange,
+  onToggleHidden,
+  typeHidden,
   onMove,
   onDelete,
   children
 }: SectionWrapperProps) {
   return (
-    <div className="border-2 border-slate-200 hover:border-slate-300 p-5 rounded-xl bg-white space-y-4 relative shadow-inner">
+    <div className={cn("border-2 border-slate-200 hover:border-slate-300 p-5 rounded-xl bg-white space-y-4 relative shadow-inner")}>
       <div className="flex flex-wrap items-center justify-between gap-2 bg-slate-50 p-2 rounded-lg border">
         <div className="flex items-center gap-x-2 w-full sm:w-auto">
           <Input 
@@ -55,6 +61,18 @@ export default function SectionWrapper({
               <option value='text'>Текст</option>
             </select>
           </div>
+
+          <Button 
+            size="icon" 
+            variant="ghost" 
+            className={cn(`h-7 w-7 text-slate-400"}`,
+              typeHidden && "text-amber-600 bg-amber-50"
+            )}
+            onClick={onToggleHidden}
+            //title={typeHidden ? "Секция скрыта от пользователей" : "Секция видна пользователям"}
+          >
+            {typeHidden ? <EyeOff className="size-3.5" /> : <Eye className="size-3.5" />}
+          </Button>
         </div>
 
         <div className="flex items-center gap-x-1 ml-auto">

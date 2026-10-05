@@ -6,21 +6,16 @@ import path from "path"
 import { revalidatePath } from "next/cache"
 import { SectionSchema } from "@/@types/schema"
 
-export async function saveSectionData(fileName: string, updatedData: SectionSchema[]) {
+export async function saveSectionData(pageSlug: string, fileName: string, updatedData: SectionSchema[]) {
   console.log(fileName, )
   try {
-    // 1. Строим абсолютный путь к файлу (например: src/data/basic-info.json)
-    const dataDirectory = path.join(process.cwd(), "app/(pages)/common/")
-    const filePath = path.join(dataDirectory, fileName)
+    const dataDirectory = path.join(process.cwd(), "app/(pages)/")
+    const filePath = path.join(dataDirectory, pageSlug, fileName)
 
-    // 2. Превращаем объект обратно в строку JSON с красивыми отступами в 2 пробела
     const jsonString = JSON.stringify(updatedData, null, 2)
 
-    // 3. Перезаписываем файл в системе
     await fs.writeFile(filePath, jsonString, "utf8")
 
-    // 4. ГАРАНТИЯ СТАТИКИ: Говорим Next.js очистить кэш и пересобрать 
-    // публичную страницу sveden/common, чтобы робот Рособрнадзора сразу увидел правки
     revalidatePath("/sveden/common")
 
     return { success: true }

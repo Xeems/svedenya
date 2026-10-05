@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { PolymorphicValue } from "@/@types/schema"
+import { EyeOffIcon } from "lucide-react"
 
 interface FieldEditorProps {
   cell: any; // Принимает плоский объект ячейки/поля
@@ -53,6 +54,20 @@ export default function PolymorphicFieldEditor({ cell, onChange }: FieldEditorPr
             <option value="link">link (Внешняя ссылка)</option>
             <option value="signedDocument">signedDocument (Документ с ЭЦП)</option>
           </select>
+        </div>
+        <div className="flex items-center justify-between p-2 rounded bg-amber-50/50 border mb-4">
+          <div className="flex items-center gap-x-2">
+            <EyeOffIcon className="size-4 " />
+            <div className="flex flex-col">
+              <span className="text-xs font-semibold">Режим скрытия тега</span>
+            </div>
+          </div>
+          <input 
+            type="checkbox" 
+            checked={cell.hidden || false} 
+            onChange={(e) => onChange({ ...cell, hidden: e.target.checked })}
+            className="w-4 h-4 accent-amber-600 rounded cursor-pointer"
+          />
         </div>
       </div>
 
