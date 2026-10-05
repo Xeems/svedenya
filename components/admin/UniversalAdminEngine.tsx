@@ -147,6 +147,17 @@ const handleSave = async () => {
                 }
                 return s
               }))}
+
+              onToggleRowHidden={(rId) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  return {
+                    ...s,
+                    // Находим нужную строку по ID и инвертируем её флаг hidden
+                    data: s.data.map(r => r.rowId === rId ? { ...r, hidden: !r.hidden } : r)
+                  }
+                }
+                return s
+              }))}
             />
           )}
 

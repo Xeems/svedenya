@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import PolymorphicFieldEditor from "./PolymorphicFieldEditor"
 import { HorizontalRow } from "@/@types/schema"
+import { cn } from "cn"
 
 interface HorizontalTableEditorProps {
   sectionId: string
@@ -23,6 +24,7 @@ interface HorizontalTableEditorProps {
   onAddColumn: () => void          
   onDeleteColumn: (colIdx: number) => void 
   onToggleColumnHidden: (colIdx: number) => void
+  onToggleRowHidden: (rowId: string) => void
 }
 
 export default function HorizontalTableEditor({
@@ -37,7 +39,8 @@ export default function HorizontalTableEditor({
   onDeleteRow,
   onAddColumn,
   onDeleteColumn,
-  onToggleColumnHidden
+  onToggleColumnHidden,
+  onToggleRowHidden
 }: HorizontalTableEditorProps) {
   
   const safeHeaders = Array.isArray(headers) ? headers : ["Новая колонка"]
@@ -131,18 +134,21 @@ export default function HorizontalTableEditor({
               </TableRow>
             ) : (
               safeRows.map((row, rowIndex) => (
-                <TableRow key={row.rowId || rowIndex} className="hover:bg-slate-50/30">
+                <TableRow key={row.rowId || rowIndex} className={cn("hover:bg-slate-50/30", row.hidden && "bg-gray-200")}>
                   {/* Атрибут строки */}
-                  <TableCell className="p-2 bg-slate-50/30 border-r align-middle">
-                    <div className="flex items-center gap-x-1">
-                      <Tag className="size-3 text-slate-400 shrink-0" />
+                  <TableCell className="p-2 bg-slate-50/30 flex flex-row items-center border-r align-middle">
+                    <div className="flex flex-row items-center gap-x-1">
                       <Input
                         value={row.rowItemProp || ""}
                         onChange={(e) => onRowItemPropChange(row.rowId, e.target.value)}
-                        className="h-7 text-[10px] font-mono p-1 px-1.5 bg-white"
+                        className="h-7 text-[10px] font-mono p-1 px-1.5 "
                         placeholder="itemprop строки"
                       />
                     </div>
+                    <Button variant={"ghost"} className="p-2 py-0" onClick={() => onToggleRowHidden(row.rowId)}>
+                      {row.hidden ? <EyeOffIcon className="size-4 shrink-0"/> : <EyeIcon className="size-4 shrink-0"/>}
+                    </Button>
+                    
                   </TableCell>
 
                   {/* Ячейки строки */}
@@ -162,7 +168,7 @@ export default function HorizontalTableEditor({
                                 <Settings className="size-2.5" />
                               </Button>
                             </DialogTrigger>
-                            <DialogContent className="sm:max-w-[420px]">
+                            <DialogContent className="sm:max-w-120">
                               <PolymorphicFieldEditor cell={cell} onChange={(updated) => onCellChange(row.rowId, cIdx, updated)} />
                             </DialogContent>
                           </Dialog>

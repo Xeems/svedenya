@@ -21,64 +21,280 @@
         "rowId": "staff-row-filimonov-sn",
         "rowItemProp": "teachingStaff",
         "cells": [
-          { "type": "text", "itemProp": "fio", "text": "Филимонов С.Н." },
-          { "type": "text", "itemProp": "post", "text": "Начальник отдела" },
-          { "type": "text", "itemProp": "teachingDiscipline", "text": "—" },
-          { "type": "text", "itemProp": "teachingLevel", "text": "—" },
-          { "type": "text", "itemProp": "degree", "text": "Д.М.Н." },
-          { "type": "text", "itemProp": "academStat", "text": "Профессор" },
-          { "type": "text", "itemProp": "qualification", "text": "терапия 423104/4245532 от 05.02.2025\n\nпрофпатология 423104/425045 от 11.10.2025" },
-          { "type": "text", "itemProp": "profDevelopment", "text": "—" },
-          { "type": "text", "itemProp": "specExperience", "text": "41 г 7 мес" },
-          { "type": "text", "itemProp": "teachingOp", "text": "—" }
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Филимонов С.Н."
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Начальник отдела"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingDiscipline",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingLevel",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "degree",
+            "text": "Д.М.Н."
+          },
+          {
+            "type": "text",
+            "itemProp": "academStat",
+            "text": "Профессор"
+          },
+          {
+            "type": "text",
+            "itemProp": "qualification",
+            "text": "терапия 423104/4245532 от 05.02.2025\n\nпрофпатология 423104/425045 от 11.10.2025"
+          },
+          {
+            "type": "text",
+            "itemProp": "profDevelopment",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "specExperience",
+            "text": "41 г 7 мес"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingOp",
+            "text": "—"
+          }
         ]
       },
       {
         "rowId": "staff-row-martynov-id",
         "rowItemProp": "teachingStaff",
         "cells": [
-          { "type": "text", "itemProp": "fio", "text": "Мартынов И.Д." },
-          { "type": "text", "itemProp": "post", "text": "Заведующий лабораторией" },
-          { "type": "text", "itemProp": "teachingDiscipline", "text": "неврология" },
-          { "type": "text", "itemProp": "teachingLevel", "text": "—" },
-          { "type": "text", "itemProp": "degree", "text": "К.М.Н." },
-          { "type": "text", "itemProp": "academStat", "text": "—" },
-          { "type": "text", "itemProp": "qualification", "text": "функциональная диагностика 160020561 от 24.03.2025\n\nневрология 423104/424819 от 15.02.2025" },
-          { "type": "text", "itemProp": "profDevelopment", "text": "—" },
-          { "type": "text", "itemProp": "specExperience", "text": "18 л 1 мес" },
-          { "type": "text", "itemProp": "teachingOp", "text": "неврология" }
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Мартынов И.Д."
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Заведующий лабораторией"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingDiscipline",
+            "text": "неврология"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingLevel",
+            "text": "Врач – невролог высшей квалификационной категории"
+          },
+          {
+            "type": "text",
+            "itemProp": "degree",
+            "text": "К.М.Н."
+          },
+          {
+            "type": "text",
+            "itemProp": "academStat",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "qualification",
+            "text": "функциональная диагностика 160020561 от 24.03.2025\n\nневрология 423104/424819 от 15.02.2025"
+          },
+          {
+            "type": "text",
+            "itemProp": "profDevelopment",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "specExperience",
+            "text": "18 л 1 мес"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingOp",
+            "text": "неврология"
+          }
         ]
       },
       {
         "rowId": "staff-row-panev-ni",
         "rowItemProp": "teachingStaff",
         "cells": [
-          { "type": "text", "itemProp": "fio", "text": "Панев Н.И." },
-          { "type": "text", "itemProp": "post", "text": "Заведующий лабораторией" },
-          { "type": "text", "itemProp": "teachingDiscipline", "text": "профпатология" },
-          { "type": "text", "itemProp": "teachingLevel", "text": "—" },
-          { "type": "text", "itemProp": "degree", "text": "Д.М.Н." },
-          { "type": "text", "itemProp": "academStat", "text": "—" },
-          { "type": "text", "itemProp": "qualification", "text": "терапия 423104/424527 от 05.02.2025" },
-          { "type": "text", "itemProp": "profDevelopment", "text": "пульмонология ПП/927310 от 22.03.2007" },
-          { "type": "text", "itemProp": "specExperience", "text": "40 л" },
-          { "type": "text", "itemProp": "teachingOp", "text": "профпатология" }
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Панев Н.И."
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Заведующий лабораторией"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingDiscipline",
+            "text": "профпатология"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingLevel",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "degree",
+            "text": "Д.М.Н."
+          },
+          {
+            "type": "text",
+            "itemProp": "academStat",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "qualification",
+            "text": "терапия 423104/424527 от 05.02.2025"
+          },
+          {
+            "type": "text",
+            "itemProp": "profDevelopment",
+            "text": "пульмонология ПП/927310 от 22.03.2007"
+          },
+          {
+            "type": "text",
+            "itemProp": "specExperience",
+            "text": "40 л"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingOp",
+            "text": "профпатология"
+          }
         ]
       },
       {
         "rowId": "staff-row-filimonov-es",
         "rowItemProp": "teachingStaff",
         "cells": [
-          { "type": "text", "itemProp": "fio", "text": "Филимонов Е.С." },
-          { "type": "text", "itemProp": "post", "text": "Заместитель директора по научной работе" },
-          { "type": "text", "itemProp": "teachingDiscipline", "text": "терапия" },
-          { "type": "text", "itemProp": "teachingLevel", "text": "—" },
-          { "type": "text", "itemProp": "degree", "text": "К.М.Н." },
-          { "type": "text", "itemProp": "academStat", "text": "—" },
-          { "type": "text", "itemProp": "qualification", "text": "—" },
-          { "type": "text", "itemProp": "profDevelopment", "text": "профпатология 180000/300644 от 15.06.2019\n\nфизическая и реабилитационная медицина 6627/00002332 от 05.03.2020" },
-          { "type": "text", "itemProp": "specExperience", "text": "14 лет" },
-          { "type": "text", "itemProp": "teachingOp", "text": "Терапия, кардиология" }
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Филимонов Е.С."
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Заместитель директора по научной работе"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingDiscipline",
+            "text": "терапия"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingLevel",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "degree",
+            "text": "К.М.Н."
+          },
+          {
+            "type": "text",
+            "itemProp": "academStat",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "qualification",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "profDevelopment",
+            "text": "профпатология 180000/300644 от 15.06.2019\n\nфизическая и реабилитационная медицина 6627/00002332 от 05.03.2020"
+          },
+          {
+            "type": "text",
+            "itemProp": "specExperience",
+            "text": "14 лет"
+          },
+          {
+            "type": "text",
+            "itemProp": "teachingOp",
+            "text": "Терапия, кардиология"
+          }
+        ]
+      },
+      {
+        "rowId": "row-8d083c10-2c25-4646-a0cf-e5ee95e81cba",
+        "rowItemProp": "teachingStaff",
+        "cells": [
+          {
+            "type": "text",
+            "text": "Ямщикова А.В.",
+            "itemProp": "fio"
+          },
+          {
+            "type": "text",
+            "text": "Главный врач",
+            "itemProp": "post"
+          },
+          {
+            "type": "text",
+            "text": "неврология",
+            "itemProp": "teachingDiscipline"
+          },
+          {
+            "type": "text",
+            "text": "Врач-невролог первой категории  Врач функциональной диагностики  Врач ультразвуковой диагностики  Врач-профпатолог  Специалист в области организации здравоохранения и общественного здоровья      ",
+            "itemProp": "teachingLevel"
+          },
+          {
+            "type": "text",
+            "text": "К.М.Н",
+            "itemProp": "degree"
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": "academStat"
+          },
+          {
+            "type": "text",
+            "text": "Ультразвуковая диагностика поражения нервов  7827 01213991 от 14.06.2026  Экстрапирамидная патология с курсом ботулинотерапии ПК0226 0000066 от 19.02.2026  Ботулинотерапия при спастичности верхней конечности под контролем УЗИ  ПК1025 0000038 от 18.10.2025  Ботулинотерапия ПК0325 0000015 от 23.03.2025",
+            "itemProp": "qualification"
+          },
+          {
+            "type": "text",
+            "text": "Организация здравоохранения и общественное здоровье  ПП/780500164978 от 27.12.2019; аккредитация 7724 032415042 от 26.11.2026 действует до 26.11.2029  Неврология (ординатура ) аккредитация 7725 033784153 от 10.12.2025 действует до 10.12.2030  Ультразвуковая диагностика  ПП аккредитация  7724 032416965 от 26.11.2024 до 26.11.2029  Функциональная диагностика ПП  аккредитация 7722 028775711 от 27.12.2022 действует до 27.12.2027  Профпатология (ординатура)",
+            "itemProp": "profDevelopment"
+          },
+          {
+            "type": "text",
+            "text": "19 л 1 мес",
+            "itemProp": "specExperience"
+          },
+          {
+            "type": "text",
+            "text": "неврология",
+            "itemProp": "teachingOp"
+          }
         ]
       }
     ]
