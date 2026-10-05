@@ -13,12 +13,7 @@ export default function ManagerPage() {
   return (
     <main className="flex flex-col gap-y-8">
       <PageH1Header>Руководство</PageH1Header>
-      {data.map((section) =>
-        <section key={section.sectionId} className='space-y-4'>
-          {section.name &&<h2 className="text-xl font-semibold">{section.name}</h2>}
-            <SectionParser section={section}/>
-        </section>
-      )}
+      {data.map((section) =>( <SectionParser section={section} key={section.sectionId}/> ))}
     </main>
     )
 }

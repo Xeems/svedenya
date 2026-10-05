@@ -48,7 +48,7 @@ export interface HorizontalTableSection {
   name?: string;
   type: "horizontalTable";
   headers: string[];
-  hiddenColumns?: boolean[];
+  hiddenColumns?: number[];
   data: HorizontalRow[];
   hidden?: boolean
 }

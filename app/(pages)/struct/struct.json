@@ -1,0 +1,295 @@
+[
+  {
+    "sectionId": "section-89879c49-a586-44b7-8e89-8af2d6ea2ebd",
+    "name": "Структура и органы управления образовательной организацией",
+    "type": "horizontalTable",
+    "data": [
+      {
+        "rowId": "struct-row-dpo",
+        "rowItemProp": "structOrgUprav",
+        "cells": [
+          {
+            "type": "text",
+            "itemProp": "name",
+            "text": "Отдел высшего и дополнительного профессионального образования"
+          },
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Филимонов Сергей Николаевич"
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Начальник отдела"
+          },
+          {
+            "type": "text",
+            "itemProp": "addressStr",
+            "text": "654041, Кемеровская область-Кузбасс, г. Новокузнецк, ул. Кутузова, д. 23"
+          },
+          {
+            "type": "link",
+            "itemProp": "site",
+            "text": "http://nii-kpg.ru",
+            "href": "http://nii-kpg.ru"
+          },
+          {
+            "type": "link",
+            "itemProp": "email",
+            "text": "fsn42@mail.ru;\nkorsakovatg@nii-kpg.ru",
+            "href": "mailto:fsn42@mail.ru"
+          },
+          {
+            "type": "signedDocument",
+            "itemProp": "divisionClauseDocLink",
+            "text": "Положение об отделе высшего и дополнительного профессионального образования",
+            "href": "/docs/polozhenie-dpo.pdf",
+            "signHref": "",
+            "signInfo": {
+              "owner": "",
+              "dateSigning": "",
+              "issuer": "",
+              "hash": ""
+            }
+          }
+        ]
+      },
+      {
+        "rowId": "struct-row-lab-health",
+        "rowItemProp": "structOrgUprav",
+        "cells": [
+          {
+            "type": "text",
+            "itemProp": "name",
+            "text": "Лаборатория охраны здоровья работающего населения"
+          },
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Панев Николай Иванович"
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Заведующий лабораторией"
+          },
+          {
+            "type": "text",
+            "itemProp": "addressStr",
+            "text": "654041, Кемеровская область-Кузбасс, г. Новокузнецк, ул. Кутузова, д. 23"
+          },
+          {
+            "type": "link",
+            "itemProp": "site",
+            "text": "http://nii-kpg.ru/nauka/",
+            "href": "http://nii-kpg.ru/nauka/"
+          },
+          {
+            "type": "link",
+            "itemProp": "email",
+            "text": "panevni@gmail.com",
+            "href": "mailto:panevni@gmail.com"
+          },
+          {
+            "type": "text",
+            "itemProp": "divisionClauseDocLink",
+            "text": "не предусмотрено"
+          }
+        ]
+      },
+      {
+        "rowId": "struct-row-lab-neuro",
+        "rowItemProp": "structOrgUprav",
+        "cells": [
+          {
+            "type": "text",
+            "itemProp": "name",
+            "text": "Лаборатория прикладной нейрофизиологии"
+          },
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Мартынов Илья Дмитриевич"
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Заведующий лабораторией"
+          },
+          {
+            "type": "text",
+            "itemProp": "addressStr",
+            "text": "654041, Кемеровская область-Кузбасс, г. Новокузнецк, ул. Кутузова, д. 23"
+          },
+          {
+            "type": "link",
+            "itemProp": "site",
+            "text": "http://nii-kpg.ru/nauka/",
+            "href": "http://nii-kpg.ru/nauka/"
+          },
+          {
+            "type": "link",
+            "itemProp": "email",
+            "text": "mart-noy@yandex.ru",
+            "href": "mailto:mart-noy@yandex.ru"
+          },
+          {
+            "type": "text",
+            "itemProp": "divisionClauseDocLink",
+            "text": "не предусмотрено"
+          }
+        ]
+      },
+      {
+        "rowId": "struct-row-clinic",
+        "rowItemProp": "structOrgUprav",
+        "cells": [
+          {
+            "type": "text",
+            "itemProp": "name",
+            "text": "Клиника НИИ КПГПЗ"
+          },
+          {
+            "type": "text",
+            "itemProp": "fio",
+            "text": "Ямщикова Анастасия Валерьевна"
+          },
+          {
+            "type": "text",
+            "itemProp": "post",
+            "text": "Главный врач"
+          },
+          {
+            "type": "text",
+            "itemProp": "addressStr",
+            "text": "654041, Кемеровская область-Кузбасс, г. Новокузнецк, ул. Кутузова, д. 23"
+          },
+          {
+            "type": "link",
+            "itemProp": "site",
+            "text": "http://nii-kpg.ru/klinika/",
+            "href": "http://nii-kpg.ru/klinika/"
+          },
+          {
+            "type": "link",
+            "itemProp": "email",
+            "text": "nachmednii@yandex.ru",
+            "href": "mailto:nachmednii@yandex.ru"
+          },
+          {
+            "type": "text",
+            "itemProp": "divisionClauseDocLink",
+            "text": "не предусмотрено"
+          }
+        ]
+      }
+    ],
+    "headers": [
+      "Наименование структурного подразделения",
+      "Ф.И.О. Руководителей",
+      "Должность руководителя структурного подразделения",
+      "Адрес местонахождения структурного подразделения",
+      "Адрес официального сайта структурного подразделения",
+      "Адреса электронной почты структурного подразделения",
+      "Положение об органе управления/ о структурном подразделении"
+    ]
+  },
+  {
+    "sectionId": "structure-branches-hidden-table",
+    "name": "Информация о филиалах образовательной организации (в том числе находящихся за пределами Российской Федерации)",
+    "type": "horizontalTable",
+    "hidden": true,
+    "headers": [
+      "Наименование филиала",
+      "ФИО руководителя филиала",
+      "Должность руководителя",
+      "Место нахождения филиала",
+      "Адрес электронной почты",
+      "Адрес официального сайта",
+      "Положение о филиале в виде электронного документа"
+    ],
+    "data": [
+      {
+        "rowId": "branch-row-none",
+        "rowItemProp": "filInfo",
+        "hidden": true,
+        "cells": [
+          {
+            "type": "text",
+            "itemProp": "nameFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "fioFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "postFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "addressFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "emailFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "websiteFil",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "divisionClauseDocLink",
+            "text": "отсутствует",
+            "hidden": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "sectionId": "structure-represent-hidden-table",
+    "name": "Информация о представительствах образовательной организации (в том числе находящихся за пределами Российской Федерации)",
+    "type": "horizontalTable",
+    "hidden": true,
+    "headers": [
+      "Наименование представительства",
+      "ФИО руководителя представительства",
+      "Должность руководителя",
+      "Место нахождения представительства",
+      "Адрес электронной почты",
+      "Адрес официального сайта",
+      "Положение о представительстве в виде электронного документа"
+    ],
+    "data": [
+      {
+        "rowId": "represent-row-none",
+        "rowItemProp": "repInfo",
+        "hidden": true,
+        "cells": [
+          { "type": "text", "itemProp": "nameRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "fioRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "postRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "addressRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "emailRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "websiteRep", "text": "отсутствует", "hidden": true },
+          { "type": "text", "itemProp": "divisionClauseDocLink", "text": "отсутствует", "hidden": true }
+        ]
+      }
+    ]
+  }
+]

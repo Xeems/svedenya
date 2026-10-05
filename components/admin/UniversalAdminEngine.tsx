@@ -125,6 +125,17 @@ const handleSave = async () => {
                   return s
                   }))}
               
+              onToggleColumnHidden={(colIdx) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  const currentHidden: number[] = (s as any).hiddenColumns || []
+                  const nextHidden = currentHidden.includes(colIdx)
+                    ? currentHidden.filter(i => i !== colIdx) // Показываем
+                    : [...currentHidden, colIdx]            // Скрываем
+                  return { ...s, hiddenColumns: nextHidden }
+                }
+                return s
+              }))}
+
               // НАСТРОЙКА: Удаление столбца и вырезание ячейки по индексу из всех строк
               onDeleteColumn={(colIdx) => setSections(sections.map(s => {
                 if (s.sectionId === section.sectionId && s.type === "horizontalTable") {

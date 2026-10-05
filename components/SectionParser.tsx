@@ -3,21 +3,38 @@ import VerticalTable from "./VerticalTable";
 import HorizontalTable from "./HorizontalTable";
 import List from "./List";
 import SignedDocument from "./SignedDocument";
+import { cn } from "cn";
 
 
-export default async function SectionParser ({ section }: { section: SectionSchema }) {
+export default function SectionParser ({ section }: { section: SectionSchema }) {
     switch(section.type){
         case 'verticalTable':{
-            return (<VerticalTable table={section}/>)
+            return (
+            <section className={cn('space-y-4', section.hidden && 'hidden')}>
+                {section.name && <h2 className="text-xl font-semibold">{section.name}</h2>}
+                <VerticalTable table={section}/>
+            </section>)
         }
         case 'horizontalTable':{
-            return <HorizontalTable table={section}/>
+            return (
+            <section className={cn('space-y-4', section.hidden && 'hidden')}>
+                {section.name && <h2 className="text-xl font-semibold">{section.name}</h2>}
+                <HorizontalTable table={section}/>
+            </section>)
         }
         case 'list' :{
-            return <List list={section}/>
+            return (
+            <section className={cn('space-y-4', section.hidden && 'hidden')}>
+                {section.name && <h2 className="text-xl font-semibold">{section.name}</h2>}
+                <List list={section}/>
+            </section>)
         }
         case "signedDocument":{
-            return <SignedDocument itemProp={section.itemProp} href={section.href} text={section.text} signHref={section.signHref} type={section.type}/>
+            return (
+            <section className={cn('space-y-4', section.hidden && 'hidden')}>
+                {section.name && <h2 className="text-xl font-semibold">{section.name}</h2>}
+                <SignedDocument itemProp={section.itemProp} href={section.href} text={section.text} signHref={section.signHref} type={section.type}/>
+            </section>)
         }
     }
 }

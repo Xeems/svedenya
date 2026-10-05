@@ -10,7 +10,7 @@ export default function HorizontalTable({ table }: { table: HorizontalTableSecti
         <TableHeader>
           <TableRow>
             {table.headers.map((header, idx) => {
-              const isColHidden = table.hiddenColumns?.[idx];
+              const isColHidden = table.hiddenColumns?.includes(idx);
               return (
                 <TableHead key={idx} className={isColHidden ? "hidden" : "font-semibold text-sm"}>
                   {header}
@@ -30,7 +30,7 @@ export default function HorizontalTable({ table }: { table: HorizontalTableSecti
                 {...(isRowHidden && { "aria-hidden": "true" })}
               >
                 {row.cells.map((cell, cellIdx) => {
-                  const isColHidden = table.hiddenColumns?.[cellIdx];
+                  const isColHidden = table.hiddenColumns?.includes(cellIdx);
                   const isCellHidden = isRowHidden || isColHidden || cell.hidden;
                   return (
                     <TableCell 

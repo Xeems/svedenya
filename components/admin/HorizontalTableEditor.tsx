@@ -2,7 +2,7 @@
 "use client"
 
 import React from "react"
-import { Plus, Settings, Trash2, Tag, Columns, X } from "lucide-react"
+import { Plus, Settings, Trash2, Tag, Columns, X, EyeOffIcon, EyeIcon } from "lucide-react"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -14,31 +14,35 @@ interface HorizontalTableEditorProps {
   sectionId: string
   headers: string[]
   rows: HorizontalRow[]
+  hiddenColumns?: number[]
   onHeadersChange: (newHeaders: string[]) => void
   onRowItemPropChange: (rowId: string, newProp: string) => void
   onCellChange: (rowId: string, cellIdx: number, updatedCell: any) => void
   onAddRow: () => void
   onDeleteRow: (rowId: string) => void
-  onAddColumn: () => void           // Новый метод: добавление столбца
-  onDeleteColumn: (colIdx: number) => void // Новый метод: удаление столбца
+  onAddColumn: () => void          
+  onDeleteColumn: (colIdx: number) => void 
+  onToggleColumnHidden: (colIdx: number) => void
 }
 
 export default function HorizontalTableEditor({
   sectionId,
-  headers = [], // Защита от undefined
-  rows = [],    // Защита от undefined
+  headers = [], 
+  rows = [],    
+  hiddenColumns,
   onHeadersChange,
   onRowItemPropChange,
   onCellChange,
   onAddRow,
   onDeleteRow,
   onAddColumn,
-  onDeleteColumn
+  onDeleteColumn,
+  onToggleColumnHidden
 }: HorizontalTableEditorProps) {
   
-  // Безопасные фолбеки для рендеринга
   const safeHeaders = Array.isArray(headers) ? headers : ["Новая колонка"]
   const safeRows = Array.isArray(rows) ? rows : []
+  const safeHiddenCols = Array.isArray(hiddenColumns) ? hiddenColumns : []
 
   return (
     <div className="space-y-3">
@@ -60,34 +64,61 @@ export default function HorizontalTableEditor({
                 Микроразметка строки
               </TableHead>
               
-              {safeHeaders.map((h, hIdx) => (
-                <TableHead key={sectionId + "-h-" + hIdx} className="p-2 min-w-[140px] relative group/header">
-                  <div className="flex items-center gap-x-1 pr-5">
-                    <Input 
-                      value={h || ""} 
-                      onChange={(e) => {
-                        const newHeaders = [...safeHeaders]
-                        newHeaders[hIdx] = e.target.value
-                        onHeadersChange(newHeaders)
-                      }}
-                      className="h-7 text-xs font-bold "
-                      placeholder={`Заголовок ${hIdx + 1}`}
-                    />
-                    {/* Кнопка удаления конкретного столбца (видна при наведении) */}
-                    {safeHeaders.length > 1 && (
-                      <Button 
-                        size="icon" 
-                        variant="ghost" 
-                        onClick={() => onDeleteColumn(hIdx)}
-                        className="h-5 w-5 absolute right-1 top-3 text-slate-400 hover:text-red-500 rounded-full"
-                        title="Удалить этот столбец"
-                      >
-                        <X className="size-3" />
-                      </Button>
-                    )}
-                  </div>
-                </TableHead>
-              ))}
+              {safeHeaders.map((h, hIdx) => {
+                const isColHidden = safeHiddenCols.includes(hIdx)
+
+                return (
+                  <TableHead 
+                    key={sectionId + "-h-" + hIdx} 
+                    className={`p-2 min-w-[150px] relative group/header border-r last:border-r-0 ${
+                      isColHidden ? "bg-amber-50/40 border-amber-200" : ""
+                    }`}
+                  >
+                    <div className="flex flex-col gap-y-1 pr-5">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center w-full justify-between gap-x-3">
+                          {/* Иконка переключателя скрытия столбца на сайте */}
+                          <Button
+                            type="button"
+                            size="icon"
+                            variant="ghost"
+                            onClick={() => onToggleColumnHidden(hIdx)}
+                            className={`h-4 w-4 rounded-full`}
+                            title={isColHidden ? "Столбец скрыт на сайте" : "Скрыть столбец на сайте"}
+                          >
+                            {isColHidden ? <EyeOffIcon className="size-4" /> : <EyeIcon className="size-4" />}
+                          </Button>
+                          
+                          {/* Полное удаление столбца */}
+                          {safeHeaders.length > 1 && (
+                            <Button 
+                              type="button"
+                              size="icon" 
+                              variant="ghost" 
+                              onClick={() => onDeleteColumn(hIdx)}
+                              className="h-4 w-4 text-destructive/80 hover:text-destructive/90 rounded-full"
+                              title="Удалить этот столбец"
+                            >
+                              <X className="size-4" />
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+
+                      <Input 
+                        value={h || ""} 
+                        onChange={(e) => {
+                          const newHeaders = [...safeHeaders]
+                          newHeaders[hIdx] = e.target.value
+                          onHeadersChange(newHeaders)
+                        }}
+                        className={`h-7 text-xs font-bold ${isColHidden ? "border-amber-300 text-amber-900" : ""}`}
+                        placeholder={`Заголовок ${hIdx + 1}`}
+                      />
+                    </div>
+                  </TableHead>
+                )
+              })}
               <TableHead className="w-[50px]"></TableHead>
             </TableRow>
           </TableHeader>

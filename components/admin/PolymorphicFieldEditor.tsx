@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { PolymorphicValue } from "@/@types/schema"
 import { EyeOffIcon } from "lucide-react"
+import { DialogContent } from "radix-ui/dialog"
 
 interface FieldEditorProps {
   cell: any; // Принимает плоский объект ячейки/поля
@@ -31,7 +32,7 @@ export default function PolymorphicFieldEditor({ cell, onChange }: FieldEditorPr
   }
 
   return (
-    <div className="space-y-4 p-4 border rounded-lg bg-slate-50/50 text-left">
+    <DialogContent className="space-y-4  border bg-slate-50/50 text-left">
       {/* 1. Управление метаданными парсера (itemProp и тип) */}
       <div className="grid grid-cols-2 gap-2 border-b pb-3 mb-3">
         <div>
@@ -154,6 +155,6 @@ export default function PolymorphicFieldEditor({ cell, onChange }: FieldEditorPr
           </div>
         </div>
       )}
-    </div>
+    </DialogContent>
   )
 }
