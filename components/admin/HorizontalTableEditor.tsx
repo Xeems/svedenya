@@ -43,7 +43,6 @@ export default function HorizontalTableEditor({
   const safeHeaders = Array.isArray(headers) ? headers : ["Новая колонка"]
   const safeRows = Array.isArray(rows) ? rows : []
   const safeHiddenCols = Array.isArray(hiddenColumns) ? hiddenColumns.map(Number) : []
-  console.log(hiddenColumns)
 
   return (
     <div className="space-y-3">

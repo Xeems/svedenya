@@ -18,7 +18,6 @@ interface UniversalAdminEngineProps {
 }
 
 export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }: UniversalAdminEngineProps) {
-  console.log(pageFile, pageSlug)
   const [sections, setSections] = useState<SectionSchema[]>(initialData)
 
   const handleAddSection = (type: "verticalTable" | "horizontalTable" | "list") => {
@@ -74,7 +73,7 @@ const handleSave = async () => {
             <HorizontalTableEditor 
               sectionId={section.sectionId}
               headers={section.headers || []}
-              rows={section.data || []} // Помним, что в типах массив строк лежит в свойстве data
+              rows={section.data || []} 
               hiddenColumns={section.hiddenColumns}
               onHeadersChange={(h) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, headers: h } : s))}
               
