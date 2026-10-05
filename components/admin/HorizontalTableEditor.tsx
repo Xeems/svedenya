@@ -42,7 +42,8 @@ export default function HorizontalTableEditor({
   
   const safeHeaders = Array.isArray(headers) ? headers : ["Новая колонка"]
   const safeRows = Array.isArray(rows) ? rows : []
-  const safeHiddenCols = Array.isArray(hiddenColumns) ? hiddenColumns : []
+  const safeHiddenCols = Array.isArray(hiddenColumns) ? hiddenColumns.map(Number) : []
+  console.log(hiddenColumns)
 
   return (
     <div className="space-y-3">
@@ -119,7 +120,7 @@ export default function HorizontalTableEditor({
                   </TableHead>
                 )
               })}
-              <TableHead className="w-[50px]"></TableHead>
+              <TableHead className="w-12"></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -151,9 +152,9 @@ export default function HorizontalTableEditor({
                     const cell = row.cells[cIdx] || { type: "text", text: "—", itemProp: "" }
 
                     return (
-                      <TableCell key={row.rowId + "-c-" + cIdx} className="p-2 max-w-[160px] truncate align-middle border-r last:border-r-0">
-                        <div className="flex items-center justify-between gap-1 border p-1 rounded bg-slate-50/50 text-[11px] min-h-[30px]">
-                          <span className="truncate block max-w-[110px] font-medium text-slate-700">
+                      <TableCell key={row.rowId + "-c-" + cIdx} className="p-2 max-w-40 truncate align-middle border-r last:border-r-0">
+                        <div className="flex items-center justify-between gap-1 border p-1 rounded bg-slate-50/50 text-[11px] min-h-8">
+                          <span className="truncate block max-w-28 font-medium text-slate-700">
                             {cell.text || "—"}
                           </span>
                           <Dialog>

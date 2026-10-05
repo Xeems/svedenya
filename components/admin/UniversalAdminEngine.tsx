@@ -75,7 +75,7 @@ const handleSave = async () => {
               sectionId={section.sectionId}
               headers={section.headers || []}
               rows={section.data || []} // Помним, что в типах массив строк лежит в свойстве data
-              
+              hiddenColumns={section.hiddenColumns}
               onHeadersChange={(h) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, headers: h } : s))}
               
               onRowItemPropChange={(rId, newProp) => setSections(sections.map(s => {
