@@ -44,13 +44,13 @@
             "type": "signedDocument",
             "itemProp": "divisionClauseDocLink",
             "text": "Положение об отделе высшего и дополнительного профессионального образования",
-            "href": "/docs/polozhenie-dpo.pdf",
-            "signHref": "",
+            "href": "http://nii-kpg.ru/wp-content/uploads/2026/09/Положение_отдел_ВиДПО.pdf",
+            "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/Положение_отдел_ВиДПО.pdf.sig",
             "signInfo": {
-              "owner": "",
-              "dateSigning": "",
-              "issuer": "",
-              "hash": ""
+              "owner": "Коротенко Ольга Юрьевна",
+              "dateSigning": "06.10.2026 15:00",
+              "issuer": "И.О. Директора",
+              "hash": "#123"
             }
           }
         ]
@@ -281,13 +281,48 @@
         "rowItemProp": "repInfo",
         "hidden": true,
         "cells": [
-          { "type": "text", "itemProp": "nameRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "fioRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "postRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "addressRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "emailRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "websiteRep", "text": "отсутствует", "hidden": true },
-          { "type": "text", "itemProp": "divisionClauseDocLink", "text": "отсутствует", "hidden": true }
+          {
+            "type": "text",
+            "itemProp": "nameRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "fioRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "postRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "addressRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "emailRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "websiteRep",
+            "text": "отсутствует",
+            "hidden": true
+          },
+          {
+            "type": "text",
+            "itemProp": "divisionClauseDocLink",
+            "text": "отсутствует",
+            "hidden": true
+          }
         ]
       }
     ]

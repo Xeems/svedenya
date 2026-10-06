@@ -1,24 +1,25 @@
 import { PolymorphicValue } from "@/@types/schema";
 import Link from "next/link";
 import SignedDocument from "./SignedDocument";
+import { cn } from "cn";
 
 export default function ValueReader({ props }: { props: PolymorphicValue}) {
  switch (props.type) {
     case "text":
       return (
-        <span itemProp={props.itemProp} className="whitespace-pre-line text-slate-700">
+        <span itemProp={props.itemProp} className={cn("whitespace-pre-line text-slate-700", props.hidden && "hidden")}>
           {props.text}
         </span>
       )
     case "link":
       return (
-        <Link href={props.href} itemProp={props.itemProp} className="text-blue-600 hover:underline break-all font-medium">
+        <Link href={props.href} itemProp={props.itemProp} className={cn("text-blue-600 hover:underline break-all font-medium" , props.hidden && "hidden")}>
           {props.text}
         </Link>
       )
     case "signedDocument":
       return (
-        <SignedDocument type="signedDocument" href={props.href} signHref={props.signHref} itemProp={props.itemProp} text={props.text}/>
+        <SignedDocument props={props}/>
       )
     default:
       return null

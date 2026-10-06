@@ -1,151 +1,154 @@
 [
-    {
-        "sectionId": "documents-list",
-        "type": "list",
-        "data":[
-            {
-                "type": "signedDocument",
-                "text": "Устав образовательной организации",
-                "itemProp": "ustavDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Правила внутреннего распорядка обучающихся",
-                "itemProp": "localActStud",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Правила внутреннего трудового распорядка",
-                "itemProp": "localActOrder",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Коллективный договор (при наличии)",
-                "itemProp": "localActCollec",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Отчет о результатах самообследования",
-                "itemProp": "reportEduDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, копии отчетов об исполнении таких предписаний",
-                "itemProp": "prescriptionDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Правила приема обучающихся",
-                "itemProp": "priemDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Режим занятий обучающихся",
-                "itemProp": "modeDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Формы, периодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся",
-                "itemProp": "tekKontrolDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Порядок и основания перевода, отчисления и восстановления обучающихся",
-                "itemProp": "perevodDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            },
-            {
-                "type": "signedDocument",
-                "text": "Порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся",
-                "itemProp": "vozDocLink",
-                "href": "https://nii-kpg.ru/",
-                "signHref": "qwe",
-                "signInfo": {
-                    "owner": "",
-                    "dateSigning": "",
-                    "issuer": "",
-                    "hash": ""
-                }
-            }
-        ]
-    }
+  {
+    "sectionId": "documents-list",
+    "type": "list",
+    "data": [
+      {
+        "type": "signedDocument",
+        "text": "Устав образовательной организации",
+        "itemProp": "ustavDocLink",
+        "href": "http://nii-kpg.ru/wp-content/uploads/2025/12/ustav_2018.pdf",
+        "signHref": "",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Правила внутреннего распорядка обучающихся",
+        "itemProp": "localActStud",
+        "href": "http://nii-kpg.ru/wp-content/uploads/2026/10/Правила_внутренний-распорядок-обучающихся_26.pdf",
+        "signHref": "",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Правила внутреннего трудового распорядка",
+        "itemProp": "localActOrder",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        },
+        "hidden": true
+      },
+      {
+        "type": "text",
+        "text": "Коллективный договор не предусмотрен",
+        "itemProp": "localActCollec",
+        "href": "-",
+        "signHref": "",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        },
+        "hidden": true
+      },
+      {
+        "type": "signedDocument",
+        "text": "Отчет о результатах самообследования",
+        "itemProp": "reportEduDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        },
+        "hidden": true
+      },
+      {
+        "type": "signedDocument",
+        "text": "Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, копии отчетов об исполнении таких предписаний",
+        "itemProp": "prescriptionDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "qwe",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Правила приема обучающихся",
+        "itemProp": "priemDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "qwe",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Режим занятий обучающихся",
+        "itemProp": "modeDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "qwe",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Формы, периодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся",
+        "itemProp": "tekKontrolDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "qwe",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Порядок и основания перевода, отчисления и восстановления обучающихся",
+        "itemProp": "perevodDocLink",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2025/12/polog_o_perevod_otchislen_21_04_2021-2.pdf",
+        "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/polog_o_perevod_otchislen_21_04_2021-2.pdf.sig",
+        "signInfo": {
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "06.10.2026 15:00:00",
+          "issuer": "И.О. Директора",
+          "hash": "123"
+        }
+      },
+      {
+        "type": "signedDocument",
+        "text": "Порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся",
+        "itemProp": "vozDocLink",
+        "href": "https://nii-kpg.ru/",
+        "signHref": "qwe",
+        "signInfo": {
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
+        }
+      }
+    ]
+  }
 ]

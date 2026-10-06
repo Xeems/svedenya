@@ -120,10 +120,18 @@ export default function PolymorphicFieldEditor({ cell, onChange }: FieldEditorPr
 
           <div className="grid grid-cols-2 gap-2 text-xs">
             <div>
-              <Label className="text-[11px] text-slate-600">Владелец ЭП (ФИО, должность)</Label>
+              <Label className="text-[11px] text-slate-600">Фио владельца ЭП </Label>
               <Input 
                 value={cell.signInfo?.owner || ""} 
                 onChange={(e) => handleSignInfoChange("owner", e.target.value)}
+                className="h-8 text-xs"
+              />
+            </div>
+            <div>
+              <Label className="text-[11px] text-slate-600">Должность владельца ЭП</Label>
+              <Input 
+                value={cell.signInfo?.issuer || ""} 
+                onChange={(e) => handleSignInfoChange("issuer", e.target.value)}
                 className="h-8 text-xs"
               />
             </div>
@@ -134,14 +142,6 @@ export default function PolymorphicFieldEditor({ cell, onChange }: FieldEditorPr
                 onChange={(e) => handleSignInfoChange("dateSigning", e.target.value)}
                 className="h-8 text-xs"
                 placeholder="02.10.2026 12:00:00"
-              />
-            </div>
-            <div>
-              <Label className="text-[11px] text-slate-600">Кем выдан УЦ</Label>
-              <Input 
-                value={cell.signInfo?.issuer || ""} 
-                onChange={(e) => handleSignInfoChange("issuer", e.target.value)}
-                className="h-8 text-xs"
               />
             </div>
             <div>

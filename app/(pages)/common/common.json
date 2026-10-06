@@ -50,14 +50,14 @@
         "label": "Лицензия на осуществление образовательной деятельности",
         "itemProp": "licenseDocLink",
         "type": "signedDocument",
-        "text": "Лицензия",
-        "href": "/docs/license.pdf",
-        "signHref": "/docs/license.pdf.sig",
+        "text": "Выписка из реестра лицензий на осуществление образовательной деятельности",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/05/Реестровая-выписка.pdf",
+        "signHref": "",
         "signInfo": {
-          "owner": "Коротенко Ольга Юрьевна (ИО директора)",
-          "dateSigning": "14.08.2025 10:00:00",
-          "issuer": "УЦ Федерального Казначейства",
-          "hash": "8bf6a7d8c9e0f1a2b3c4d5e6f7a8b9c0"
+          "owner": "",
+          "dateSigning": "",
+          "issuer": "",
+          "hash": ""
         }
       },
       {
