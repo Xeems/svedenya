@@ -7,26 +7,26 @@
         "type": "signedDocument",
         "text": "Устав образовательной организации",
         "itemProp": "ustavDocLink",
-        "href": "http://nii-kpg.ru/wp-content/uploads/2025/12/ustav_2018.pdf",
-        "signHref": "",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2025/12/ustav_2018-1.pdf",
+        "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/ustav_2018-1.pdf.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
         "type": "signedDocument",
         "text": "Правила внутреннего распорядка обучающихся",
         "itemProp": "localActStud",
-        "href": "http://nii-kpg.ru/wp-content/uploads/2026/10/Правила_внутренний-распорядок-обучающихся_26.pdf",
-        "signHref": "",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/10/Правила_внутренний-распорядок-обучающихся_26.pdf",
+        "signHref": "http://nii-kpg.ru/wp-content/uploads/2026/10/Правила_внутренний-распорядок-обучающихся_26.pdf.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
@@ -61,8 +61,22 @@
         "type": "signedDocument",
         "text": "Отчет о результатах самообследования",
         "itemProp": "reportEduDocLink",
-        "href": "https://nii-kpg.ru/",
-        "signHref": "",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/04/НИИ-КПГПЗ_самообследование_25.pdf",
+        "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/НИИ-КПГПЗ_самообследование_25.pdf.sig",
+        "signInfo": {
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.20",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
+        },
+        "hidden": false
+      },
+      {
+        "type": "signedDocument",
+        "text": "Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования",
+        "itemProp": "prescriptionDocLink",
+        "href": "",
+        "signHref": "qwe",
         "signInfo": {
           "owner": "",
           "dateSigning": "",
@@ -73,41 +87,41 @@
       },
       {
         "type": "signedDocument",
-        "text": "Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, копии отчетов об исполнении таких предписаний",
-        "itemProp": "prescriptionDocLink",
-        "href": "https://nii-kpg.ru/",
-        "signHref": "qwe",
+        "text": "Правила приема обучающихся (ординатура)",
+        "itemProp": "priemDocLink",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/10/Порядок-приема_ординатура_26.pdf",
+        "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/Порядок-приема_ординатура_26.pdf.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
         "type": "signedDocument",
-        "text": "Правила приема обучающихся",
-        "itemProp": "priemDocLink",
-        "href": "https://nii-kpg.ru/",
-        "signHref": "qwe",
+        "text": "Правила приема обучающихся (аспирантура)",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/10/Порядок_приема_асп_26г.pdf",
+        "signHref": "http://nii-kpg.ru/wp-content/uploads/2026/10/Порядок_приема_асп_26г.pdf.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
-        }
+          "owner": "Коротенко Ольга Юрьевна",
+          "issuer": "И. О. Директора",
+          "dateSigning": "07.10.2026",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
+        },
+        "itemProp": "priemDocLink"
       },
       {
         "type": "signedDocument",
         "text": "Режим занятий обучающихся",
         "itemProp": "modeDocLink",
-        "href": "https://nii-kpg.ru/",
-        "signHref": "qwe",
+        "href": "http://nii-kpg.ru/wp-content/uploads/2026/10/Расписание_орд.pdf",
+        "signHref": "http://nii-kpg.ru/wp-content/uploads/2026/10/Расписание_орд.pdf.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
@@ -121,7 +135,8 @@
           "dateSigning": "",
           "issuer": "",
           "hash": ""
-        }
+        },
+        "hidden": true
       },
       {
         "type": "signedDocument",
@@ -138,7 +153,7 @@
       },
       {
         "type": "signedDocument",
-        "text": "Порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся",
+        "text": "Порядок оформления возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся (не предусмотрен)",
         "itemProp": "vozDocLink",
         "href": "https://nii-kpg.ru/",
         "signHref": "qwe",
@@ -147,7 +162,8 @@
           "dateSigning": "",
           "issuer": "",
           "hash": ""
-        }
+        },
+        "hidden": true
       }
     ]
   }

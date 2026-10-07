@@ -14,7 +14,7 @@ import PolymorphicSectionEditor from "./PolymorphicSectionEditor"
 interface UniversalAdminEngineProps {
   initialData: SectionSchema[]
   pageFile: string
-  pageSlug: string 
+  pageSlug: string
 }
 
 export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }: UniversalAdminEngineProps) {
@@ -29,15 +29,15 @@ export default function UniversalAdminEngine({ initialData, pageFile, pageSlug }
     setSections([...sections, base])
   }
 
-const handleSave = async () => {
-  // Передаем pageSlug вместо имени файла, чтобы сервер сам определил правильную папку роута
-  const result = await saveSectionData(pageSlug, pageFile, sections)
-  if (result.success) {
-    alert("Изменения успешно сохранены! Публичная страница обновлена.")
-  } else {
-    alert("Ошибка сохранения: " + result.error)
+  const handleSave = async () => {
+    // Передаем pageSlug вместо имени файла, чтобы сервер сам определил правильную папку роута
+    const result = await saveSectionData(pageSlug, pageFile, sections)
+    if (result.success) {
+      alert("Изменения успешно сохранены! Публичная страница обновлена.")
+    } else {
+      alert("Ошибка сохранения: " + result.error)
+    }
   }
-}
 
   return (
     <div className="w-full space-y-8 mx-auto bg-white rounded-xl shadow-sm">
@@ -58,11 +58,11 @@ const handleSave = async () => {
             const temp = next[sIdx]; next[sIdx] = next[target]; next[target] = temp; setSections(next)
           }}
           typeHidden={section.hidden}
-          onToggleHidden={() => setSections(sections.map((s) => s.sectionId === section.sectionId ? {...s, hidden: !s.hidden} : s))}
+          onToggleHidden={() => setSections(sections.map((s) => s.sectionId === section.sectionId ? { ...s, hidden: !s.hidden } : s))}
         >
           {section.type === "verticalTable" && (
-            <VerticalTableEditor 
-              data={section.data} 
+            <VerticalTableEditor
+              data={section.data}
               onFieldChange={(fIdx, updated) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: s.data.map((f, i) => i === fIdx ? updated : f) } : s))}
               onAddField={() => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: [...s.data, { label: "Новое поле", type: "text", text: "—" }] } : s))}
               onDeleteField={(fIdx) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "verticalTable" ? { ...s, data: s.data.filter((_, i) => i !== fIdx) } : s))}
@@ -70,60 +70,60 @@ const handleSave = async () => {
           )}
 
           {section.type === "horizontalTable" && (
-            <HorizontalTableEditor 
+            <HorizontalTableEditor
               sectionId={section.sectionId}
               headers={section.headers || []}
-              rows={section.data || []} 
+              rows={section.data || []}
               hiddenColumns={section.hiddenColumns}
               onHeadersChange={(h) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, headers: h } : s))}
-              
+
               onRowItemPropChange={(rId, newProp) => setSections(sections.map(s => {
                 if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
                   return { ...s, data: s.data.map(r => r.rowId === rId ? { ...r, rowItemProp: newProp } : r) }
                 }
                 return s
               }))}
-              
+
               onCellChange={(rId, cIdx, updated) => setSections(sections.map(s => {
                 if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
                   return { ...s, data: s.data.map(r => r.rowId === rId ? { ...r, cells: r.cells.map((c, i) => i === cIdx ? updated : c) } : r) }
                 }
                 return s
               }))}
-              
+
               onAddRow={() => setSections(sections.map(s => {
                 if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
                   const currentHeadersLength = s.headers?.length || 1
-                  return { 
-                    ...s, 
-                    data: [...(s.data || []), { 
-                      rowId: "row-" + crypto.randomUUID(), 
-                      rowItemProp: "", 
-                      cells: Array.from({ length: currentHeadersLength }, () => ({ type: "text", text: "—", itemProp: "" })) 
-                    }] 
+                  return {
+                    ...s,
+                    data: [...(s.data || []), {
+                      rowId: "row-" + crypto.randomUUID(),
+                      rowItemProp: "",
+                      cells: Array.from({ length: currentHeadersLength }, () => ({ type: "text", text: "—", itemProp: "" }))
+                    }]
                   }
                 }
                 return s
               }))}
-              
+
               onDeleteRow={(rId) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "horizontalTable" ? { ...s, data: s.data.filter(r => r.rowId !== rId) } : s))}
-              
+
               onAddColumn={() => setSections(sections.map(s => {
-                  if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
-                      const newHeaders = [...(s.headers || []), `Колонка ${(s.headers?.length || 0) + 1}`]
-                      const newData = (s.data || []).map(row => ({
-                      ...row,
-                      cells: [...row.cells, { 
-                          type: "text" as const, 
-                          text: "—", 
-                          itemProp: "" 
-                      } as PolymorphicValue]
-                      }))
-                      return { ...s, headers: newHeaders, data: newData }
-                  }
-                  return s
-                  }))}
-              
+                if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
+                  const newHeaders = [...(s.headers || []), `Колонка ${(s.headers?.length || 0) + 1}`]
+                  const newData = (s.data || []).map(row => ({
+                    ...row,
+                    cells: [...row.cells, {
+                      type: "text" as const,
+                      text: "—",
+                      itemProp: ""
+                    } as PolymorphicValue]
+                  }))
+                  return { ...s, headers: newHeaders, data: newData }
+                }
+                return s
+              }))}
+
               onToggleColumnHidden={(colIdx) => setSections(sections.map(s => {
                 if (s.sectionId === section.sectionId && s.type === "horizontalTable") {
                   const currentHidden: number[] = (s as any).hiddenColumns || []
@@ -162,15 +162,30 @@ const handleSave = async () => {
           )}
 
           {section.type === "list" && (
-            <ListEditor 
+            <ListEditor
               data={section.data}
               onItemChange={(iIdx, updated) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: s.data.map((item, i) => i === iIdx ? updated : item) } : s))}
               onAddItem={() => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: [...s.data, { type: "text", text: "Новая запись" }] } : s))}
               onDeleteItem={(iIdx) => setSections(sections.map(s => s.sectionId === section.sectionId && s.type === "list" ? { ...s, data: s.data.filter((_, i) => i !== iIdx) } : s))}
+              onMoveItem={(itemIdx, direction) => setSections(sections.map(s => {
+                if (s.sectionId === section.sectionId && s.type === "list") {
+                  const nextData = [...s.data]
+                  const targetIdx = direction === "up" ? itemIdx - 1 : itemIdx + 1
+
+                  if (targetIdx >= 0 && targetIdx < nextData.length) {
+                    const temp = nextData[itemIdx]
+                    nextData[itemIdx] = nextData[targetIdx]
+                    nextData[targetIdx] = temp
+                  }
+
+                  return { ...s, data: nextData }
+                }
+                return s
+              }))}
             />
           )}
 
-          {(section.type === "link" || section.type === "text" || section.type === "signedDocument") &&(
+          {(section.type === "link" || section.type === "text" || section.type === "signedDocument") && (
             <PolymorphicSectionEditor
               section={section}
               onChange={(updatedSection) => setSections(sections.map(s => s.sectionId === section.sectionId ? updatedSection : s))}

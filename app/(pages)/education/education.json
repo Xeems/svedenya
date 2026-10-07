@@ -15,52 +15,6 @@
     ],
     "data": [
       {
-        "rowId": "program-3-2-1",
-        "rowItemProp": "eduAccred",
-        "cells": [
-          {
-            "type": "text",
-            "itemProp": "eduCode",
-            "text": "3.2.1"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduName",
-            "text": "Гигиена"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduProf",
-            "text": "Образовательная программа"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduLevel",
-            "text": "Высшее образование – аспирантура"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduForm",
-            "text": "Очная"
-          },
-          {
-            "type": "text",
-            "itemProp": "learningTerm",
-            "text": "3 года"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPrac",
-            "text": "Практики"
-          }
-        ]
-      },
-      {
         "rowId": "program-3-2-4",
         "rowItemProp": "eduAccred",
         "cells": [
@@ -77,12 +31,12 @@
           {
             "type": "text",
             "itemProp": "eduProf",
-            "text": "Образовательная программа"
+            "text": "Медицина труда"
           },
           {
             "type": "text",
             "itemProp": "eduLevel",
-            "text": "Высшее образование – аспирантура"
+            "text": "Подготовка научно-педагогических кадров в аспирантуре"
           },
           {
             "type": "text",
@@ -97,58 +51,12 @@
           {
             "type": "text",
             "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
+            "text": "Медицина труда; Педагогика и основа профессиональной коммуникации; Общественное здоровье и  Здравоохранение; Патология;  Медицина  чрезвычайных ситуаций; История и философия науки; Иностранный язык"
           },
           {
             "type": "text",
             "itemProp": "eduPrac",
-            "text": "Практики"
-          }
-        ]
-      },
-      {
-        "rowId": "program-3-2-3",
-        "rowItemProp": "eduAccred",
-        "cells": [
-          {
-            "type": "text",
-            "itemProp": "eduCode",
-            "text": "3.2.3"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduName",
-            "text": "Общественное здоровье, организация и социология здравоохранения"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduProf",
-            "text": "Образовательная программа"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduLevel",
-            "text": "Высшее образование – аспирантура"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduForm",
-            "text": "Очная"
-          },
-          {
-            "type": "text",
-            "itemProp": "learningTerm",
-            "text": "3 года"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPrac",
-            "text": "Практики"
+            "text": "Производственная (научно-исследовательская) практика; Производственная (педагогическая) практика."
           }
         ]
       },
@@ -169,12 +77,12 @@
           {
             "type": "text",
             "itemProp": "eduProf",
-            "text": "Образовательная программа"
+            "text": "Терапия"
           },
           {
             "type": "text",
             "itemProp": "eduLevel",
-            "text": "Высшее образование – ординатура"
+            "text": "Ординатура"
           },
           {
             "type": "text",
@@ -189,12 +97,12 @@
           {
             "type": "text",
             "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
+            "text": "Терапия; Педагогика и основа профессиональной коммуникации; Общественное здоровье и  Здравоохранение; Патология;  Медицина  чрезвычайных ситуаций; Медицинская  Реабилитация; ЭВН и контроля качества оказания  медицинской помощи; Острые и неотложные состояния; Информационно-коммуникационные технологии и информационная безопасность в профессиональной  деятельности"
           },
           {
             "type": "text",
             "itemProp": "eduPrac",
-            "text": "Практики"
+            "text": "Производственная (клиническая) практика по терапииии; Производственная (клиническая) практика \"Амбулаторная терапия\""
           }
         ]
       },
@@ -215,12 +123,12 @@
           {
             "type": "text",
             "itemProp": "eduProf",
-            "text": "Образовательная программа"
+            "text": "Профпатология"
           },
           {
             "type": "text",
             "itemProp": "eduLevel",
-            "text": "Высшее образование – ординатура"
+            "text": "Ординатура"
           },
           {
             "type": "text",
@@ -235,12 +143,12 @@
           {
             "type": "text",
             "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
+            "text": "Профпатология; Педагогика и основа профессиональной коммуникации; Общественное здоровье и  Здравоохранение; Патология;  Медицина  чрезвычайных ситуаций; Медицинская  Реабилитация; ЭВН и контроля качества оказания  медицинской помощи; Острые и неотложные состояния; Информационно-коммуникационные технологии и информационная безопасность в профессиональной  деятельности"
           },
           {
             "type": "text",
             "itemProp": "eduPrac",
-            "text": "Практики"
+            "text": "Производственная (клиническая) практика по профпатологии; Производственная (клиническая) практика \"Амбулаторная профпатология\""
           }
         ]
       },
@@ -261,12 +169,12 @@
           {
             "type": "text",
             "itemProp": "eduProf",
-            "text": "Образовательная программа"
+            "text": "Неврология"
           },
           {
             "type": "text",
             "itemProp": "eduLevel",
-            "text": "Высшее образование – ординатура"
+            "text": "Ординатура"
           },
           {
             "type": "text",
@@ -281,104 +189,12 @@
           {
             "type": "text",
             "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
+            "text": "Неврология; Педагогика и основа профессиональной коммуникации; Общественное здоровье и  Здравоохранение; Патология;  Медицина  чрезвычайных ситуаций; Медицинская  Реабилитация; ЭВН и контроля качества оказания "
           },
           {
             "type": "text",
             "itemProp": "eduPrac",
-            "text": "Практики"
-          }
-        ]
-      },
-      {
-        "rowId": "program-31-08-71",
-        "rowItemProp": "eduAccred",
-        "cells": [
-          {
-            "type": "text",
-            "itemProp": "eduCode",
-            "text": "31.08.71"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduName",
-            "text": "Организация здравоохранения и общественное здоровье"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduProf",
-            "text": "Образовательная программа"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduLevel",
-            "text": "Высшее образование – ординатура"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduForm",
-            "text": "Очная"
-          },
-          {
-            "type": "text",
-            "itemProp": "learningTerm",
-            "text": "2 года"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPrac",
-            "text": "Практики"
-          }
-        ]
-      },
-      {
-        "rowId": "program-dpo-profpat",
-        "rowItemProp": "eduAccred",
-        "cells": [
-          {
-            "type": "text",
-            "itemProp": "eduCode",
-            "text": "—"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduName",
-            "text": "Повышение квалификации врачей по специальности «Профпатология»"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduProf",
-            "text": "Образовательная программа"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduLevel",
-            "text": "Дополнительное профессиональное образование (ДПО)"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduForm",
-            "text": "Очная / Очно-заочная"
-          },
-          {
-            "type": "text",
-            "itemProp": "learningTerm",
-            "text": "от 36 до 144 часов"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPred",
-            "text": "Учебные предметы, курсы, дисциплины"
-          },
-          {
-            "type": "text",
-            "itemProp": "eduPrac",
-            "text": "Практики"
+            "text": "Производственная (клиническая) практика по неврологии; Производственная (клиническая) практика \"Амбулаторная неврология\""
           }
         ]
       }
@@ -388,9 +204,10 @@
   },
   {
     "sectionId": "edu-lan-doc",
-    "type": "signedDocument",
+    "type": "text",
     "href": "123",
-    "text": "Информация о языках, на которых осуществляется образование (обучение)",
+    "hidden": true,
+    "text": "НИИ КПГПЗ осуществляет образовательную деятельность по образовательным программам высшего образования в ординатуре и аспирантуре на русском языке.",
     "itemProp": "languageEl",
     "signHref": "123",
     "signInfo": {
@@ -398,50 +215,52 @@
       "dateSigning": "string;",
       "issuer": "string;",
       "hash": "string;"
-    }
+    },
+    "data": []
   },
   {
     "sectionId": "education-documents-list",
     "name": "Электронные документы подраздела «Образование»",
     "type": "list",
+    "hidden": false,
     "data": [
       {
         "type": "signedDocument",
         "itemProp": "eduChislenEl",
         "text": "Информация о численности обучающихся по реализуемым образовательным программам за счет бюджетных ассигнований",
-        "href": "123.pdf",
-        "signHref": "123.sig",
+        "href": " https://nii-kpg.ru/wp-content/uploads/2026/10/3.5.3-Численность-обучающихся.doc",
+        "signHref": "http://nii-kpg.ru/wp-content/uploads/2026/10/3.5.3-Численность-обучающихся.doc.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
         "type": "signedDocument",
         "itemProp": "eduPriemEl",
         "text": "Информация о результатах приема",
-        "href": "123.pdf",
-        "signHref": "123.sig",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/10/3.5.4-Информация-о-результатах-приема.doc",
+        "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/3.5.4-Информация-о-результатах-приема.doc.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
         "type": "signedDocument",
         "itemProp": "eduPerevodEl",
         "text": "Информация о результатах перевода, восстановления и отчисления",
-        "href": "123.pdf",
-        "signHref": "123.sig",
+        "href": "https://nii-kpg.ru/wp-content/uploads/2026/10/3.5.5-Информация-о-результатах-перевода-восстановления-и-отчисления.doc",
+        "signHref": "http://nii-kpg.ru/wp-content/uploads/2026/10/3.5.5-Информация-о-результатах-перевода-восстановления-и-отчисления.doc.sig",
         "signInfo": {
-          "owner": "",
-          "dateSigning": "",
-          "issuer": "",
-          "hash": ""
+          "owner": "Коротенко Ольга Юрьевна",
+          "dateSigning": "07.10.2026",
+          "issuer": "И. О. Директора",
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       }
     ]
@@ -1184,15 +1003,16 @@
   {
     "sectionId": "edu-acred-doc",
     "type": "signedDocument",
-    "href": "123",
+    "href": "https://nii-kpg.ru/wp-content/uploads/2025/12/Свидетельство-о-государственной-аккредитации-от-17-марта-2017-г.pdf",
+    "hidden": false,
     "text": "Информация о наличии государственной аккредитации образовательной деятельности по реализуемым образовательным программам",
     "itemProp": "accreditationDocLink",
-    "signHref": "123",
+    "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/Свидетельство-о-государственной-аккредитации-от-17-марта-2017-г.pdf.sig",
     "signInfo": {
-      "owner": "string;",
-      "dateSigning": "string;",
-      "issuer": "string;",
-      "hash": "string;"
+      "owner": "Коротенко Ольга Юрьевна",
+      "dateSigning": "07.10.2026",
+      "issuer": "И. О. Директора",
+      "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
     }
   }
 ]

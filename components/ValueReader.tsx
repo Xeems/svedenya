@@ -19,7 +19,7 @@ export default function ValueReader({ props }: { props: PolymorphicValue}) {
       )
     case "signedDocument":
       return (
-        <SignedDocument props={props}/>
+        <SignedDocument props={props} />
       )
     default:
       return null

@@ -33,7 +33,7 @@ export default function SectionParser ({ section }: { section: SectionSchema }) 
             return (
             <section className={cn('space-y-4', section.hidden && 'hidden')}>
                 {section.name && <h2 className="text-xl font-semibold">{section.name}</h2>}
-                <SignedDocument itemProp={section.itemProp} href={section.href} text={section.text} signHref={section.signHref} type={section.type}/>
+                <SignedDocument props={section} />
             </section>)
         }
     }
