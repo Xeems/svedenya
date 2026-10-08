@@ -7,7 +7,7 @@ import { revalidatePath } from "next/cache"
 import { SectionSchema } from "@/@types/schema"
 
 export async function saveSectionData(pageSlug: string, fileName: string, updatedData: SectionSchema[]) {
-  console.log(fileName, )
+  console.log(fileName, pageSlug )
   try {
     const dataDirectory = path.join(process.cwd(), "app/(pages)/")
     const filePath = path.join(dataDirectory, pageSlug, fileName)

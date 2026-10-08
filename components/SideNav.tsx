@@ -47,7 +47,7 @@ export default function SideNav() {
                               <SidebarMenuButton asChild className="h-auto py-2.5 px-3 hover:font-semibold hover:text-accent-foreground whitespace-normal align-middle">
                                   <Link 
                                       href={`/${link.href}`}
-                                      className="font-medium text-base transition-colors line-clamp-3 block w-full"
+                                      className="font-medium text-base transition-colors line-clamp-3 flex items-center text-wrap w-full"
                                   > 
                                       {link.name}
                                   </Link>

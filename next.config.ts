@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   assetPrefix: '/sveden',
   //trailingSlash: true,
   //distDir: 'build'
+  serverExternalPackages: ['winston-syslog'],
+  logging: {
+    incomingRequests: false, // ПОЛНОСТЬЮ убирает спам вида "GET /document 200..."
+    //browserToTerminal: "error"
+  },
 };
 
 export default nextConfig;
