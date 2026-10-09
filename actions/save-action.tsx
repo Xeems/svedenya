@@ -7,7 +7,6 @@ import { revalidatePath } from "next/cache"
 import { SectionSchema } from "@/@types/schema"
 
 export async function saveSectionData(pageSlug: string, fileName: string, updatedData: SectionSchema[]) {
-  console.log(fileName, pageSlug )
   try {
     const dataDirectory = path.join(process.cwd(), "app/(pages)/")
     const filePath = path.join(dataDirectory, pageSlug, fileName)
@@ -16,7 +15,8 @@ export async function saveSectionData(pageSlug: string, fileName: string, update
 
     await fs.writeFile(filePath, jsonString, "utf8")
 
-    revalidatePath("/sveden/common")
+    revalidatePath(`/${pageSlug}`)
+    console.log(`Ревалидирован маршрут: /sveden/${pageSlug}/`)
 
     return { success: true }
   } catch (error: any) {

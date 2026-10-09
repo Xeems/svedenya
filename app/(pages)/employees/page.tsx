@@ -1,20 +1,19 @@
-import { SectionSchema } from "@/@types/schema";
 import PageH1Header from "@/components/PageH1Header";
 import SectionParser from "@/components/SectionParser";
 import { Metadata } from "next";
-import employeesData from './employees.json'
+import { getPageJson } from "@/lib/getPageJson";
 
 
 export const metadata: Metadata = {
   title: "Педагогический состав",
 };
 
-export default function EmployeesPage() {
-  const data = employeesData as SectionSchema[]
+export default async function EmployeesPage() {
+  const data = await getPageJson('employees')
   return (
     <main className="space-y-8">
       <PageH1Header>Педагогческий состав</PageH1Header>
-      {data.map((section) =>( <SectionParser section={section} key={section.sectionId}/> ))}
+      {data && data.map((section) =>( <SectionParser section={section} key={section.sectionId}/> ))}
     </main>
     )
 }

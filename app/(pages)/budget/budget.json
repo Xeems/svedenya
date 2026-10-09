@@ -15,25 +15,64 @@
         "rowId": "volume-2025",
         "rowItemProp": "",
         "cells": [
-          { "type": "text", "text": "2025 г." },
-          { "type": "text", "itemProp": "finBFVolume", "text": "2020.0" },
-          { "type": "text", "itemProp": "finBRVolume", "text": "0" },
-          { "type": "text", "itemProp": "finBMVolume", "text": "0" },
-          { "type": "text", "itemProp": "finPVolume", "text": "0" }
+          {
+            "type": "text",
+            "text": "2025 г."
+          },
+          {
+            "type": "text",
+            "itemProp": "finBFVolume",
+            "text": "2020.0"
+          },
+          {
+            "type": "text",
+            "itemProp": "finBRVolume",
+            "text": "0"
+          },
+          {
+            "type": "text",
+            "itemProp": "finBMVolume",
+            "text": "0"
+          },
+          {
+            "type": "text",
+            "itemProp": "finPVolume",
+            "text": "0"
+          }
         ]
       },
       {
         "rowId": "volume-2026",
         "rowItemProp": "",
         "cells": [
-          { "type": "text", "text": "2026 г." },
-          { "type": "text", "itemProp": "finBFVolume", "text": "2999.8" },
-          { "type": "text", "itemProp": "finBRVolume", "text": "0" },
-          { "type": "text", "itemProp": "finBMVolume", "text": "0" },
-          { "type": "text", "itemProp": "finPVolume", "text": "0" }
+          {
+            "type": "text",
+            "text": "2026 г."
+          },
+          {
+            "type": "text",
+            "itemProp": "finBFVolume",
+            "text": "2999.8"
+          },
+          {
+            "type": "text",
+            "itemProp": "finBRVolume",
+            "text": "0"
+          },
+          {
+            "type": "text",
+            "itemProp": "finBMVolume",
+            "text": "0"
+          },
+          {
+            "type": "text",
+            "itemProp": "finPVolume",
+            "text": "0"
+          }
         ]
       }
-    ]
+    ],
+    "hidden": false
   },
   {
     "sectionId": "financial-reports-table",
@@ -50,12 +89,25 @@
         "rowId": "report-2025",
         "rowItemProp": "volume",
         "cells": [
-          { "type": "text", "itemProp": "finYear", "text": "2025" },
-          { "type": "text", "itemProp": "finPost", "text": "—" },
-          { "type": "text", "itemProp": "finRas", "text": "—" }
+          {
+            "type": "text",
+            "itemProp": "finYear",
+            "text": "2025"
+          },
+          {
+            "type": "text",
+            "itemProp": "finPost",
+            "text": "—"
+          },
+          {
+            "type": "text",
+            "itemProp": "finRas",
+            "text": "—"
+          }
         ]
       }
-    ]
+    ],
+    "hidden": false
   },
   {
     "sectionId": "financial-documents-list",
@@ -80,6 +132,7 @@
         "text": "Ссылка на информацию на bus.gov.ru в соответствии с Федеральным законом № 83-ФЗ",
         "href": "https://bus.gov.ru/info-card/337328"
       }
-    ]
+    ],
+    "hidden": false
   }
 ]

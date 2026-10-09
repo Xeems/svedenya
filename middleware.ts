@@ -21,16 +21,23 @@ export function middleware(request: NextRequest) {
   //@ts-ignore
   const ip = request.ip || request.headers.get('x-forwarded-for')?.split(',')[0] || ''
 
-  const logData = {
-    app: 'next-sveden',
-    timestamp: new Date().toISOString(),
-    level: 'request-info',
-    method: request.method,
-    url: pathname,
-    ip: ip,
-    userAgent: request.headers.get('user-agent') || 'unknown'
-  };
-  console.log(JSON.stringify(logData));
+  const isPrefetch =
+    request.headers.get('purpose') === 'prefetch' ||
+    request.headers.get('x-middleware-prefetch') === '1';
+
+  // Если это фоновый предзапрос — пропускаем логирование
+  if (!isPrefetch) {
+    const logData = {
+      app: 'next-sveden',
+      timestamp: new Date().toISOString(),
+      level: 'request-info',
+      method: request.method,
+      url: pathname,
+      ip: ip,
+      userAgent: request.headers.get('user-agent') || 'unknown'
+    };
+    console.log(JSON.stringify(logData));
+  }
 
   const isPrivateRoute = PRIVATE_ROUTES.some(route => pathname.startsWith(route))
   if (isPrivateRoute) {
@@ -39,14 +46,14 @@ export function middleware(request: NextRequest) {
       //return new NextResponse('Доступ ограничен: только для локальной сети', { status: 403 })
 
       // Вариант Б: Перенаправить на страницу авторизации или главную
-      return NextResponse.redirect(new URL('/common', request.url))
+      return NextResponse.redirect(new URL('/sveden/common/', request.url))
     }
   }
 
   return NextResponse.next()
 }
 
-// Оптимизация: Middleware будет срабатывать только на указанных путях
+
 export const config = {
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico|icon.png|sitemap.xml|robots.txt).*)',

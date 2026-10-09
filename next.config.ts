@@ -5,12 +5,18 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.0.163', 'nii-kpg.ru', 'www.nii-kpg.ru'],
   basePath: '/sveden',
   assetPrefix: '/sveden',
-  //trailingSlash: true,
-  //distDir: 'build'
   serverExternalPackages: ['winston-syslog'],
   logging: {
     incomingRequests: false, // ПОЛНОСТЬЮ убирает спам вида "GET /document 200..."
-    //browserToTerminal: "error"
+  },
+  async redirects() {
+    return [
+      {
+        source: '/', // /sveden и /sveden/
+        destination: '/common', // /sveden/common
+        permanent: true, // 307 временный редирект (поменяйте на true для 308, если навсегда)
+      },
+    ]
   },
 };
 

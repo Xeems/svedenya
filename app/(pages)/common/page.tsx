@@ -1,14 +1,15 @@
 import PageH1Header from '@/components/PageH1Header';
-import commonData from './common.json' 
 import SectionParser from '@/components/SectionParser';
-import { SectionSchema } from '@/@types/schema';
+import { getPageJson } from '@/lib/getPageJson';
 
-export default async function page() {
-  const data = commonData as SectionSchema[]
+export const dynamic = 'force-static'; 
+
+export default async function CommonPage() {
+  const data = await getPageJson('common')
   return (
     <main className='space-y-8'>
       <PageH1Header>Основные сведения</PageH1Header>
-      {data.map((section) =>( <SectionParser section={section} key={section.sectionId}/> ))}
+      {data && data.map((section) =>( <SectionParser section={section} key={section.sectionId}/> ))}
     </main>
   )
 }

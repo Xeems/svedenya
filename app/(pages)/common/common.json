@@ -96,7 +96,8 @@
         "type": "text",
         "text": "не реализуется"
       }
-    ]
+    ],
+    "hidden": false
   },
   {
     "sectionId": "ucred-info",
@@ -142,6 +143,7 @@
           }
         ]
       }
-    ]
+    ],
+    "hidden": false
   }
 ]

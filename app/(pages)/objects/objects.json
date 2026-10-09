@@ -173,6 +173,33 @@
             "text": "Здание института оборудовано пандусом, лифтом, оснащено системами противопожарной сигнализации и оповещения, информационными табло, размещенная на официальном сайте информация доступна в версии для слабовидящих."
           }
         ]
+      },
+      {
+        "rowId": "row-051802c2-e09a-41c8-ad00-d9c42e0776a8",
+        "rowItemProp": "",
+        "cells": [
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          },
+          {
+            "type": "text",
+            "text": "—",
+            "itemProp": ""
+          }
+        ],
+        "hidden": true
       }
     ]
   },
@@ -192,7 +219,7 @@
       {
         "rowId": "prac-hidden-row",
         "rowItemProp": "purposePrac",
-        "hidden": true,
+        "hidden": false,
         "cells": [
           {
             "type": "text",
