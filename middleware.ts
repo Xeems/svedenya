@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const PRIVATE_ROUTES = ['/admin']
+const PRIVATE_ROUTES = ['/admin', '/documents']
 
 
 function isLocalIP(ip: string): boolean {
@@ -25,9 +25,9 @@ export function middleware(request: NextRequest) {
     request.headers.get('purpose') === 'prefetch' ||
     request.headers.get('x-middleware-prefetch') === '1';
 
-  // Если это фоновый предзапрос — пропускаем логирование
+  let logData
   if (!isPrefetch) {
-    const logData = {
+    logData = {
       app: 'next-sveden',
       timestamp: new Date().toISOString(),
       level: 'request-info',
@@ -42,14 +42,21 @@ export function middleware(request: NextRequest) {
   const isPrivateRoute = PRIVATE_ROUTES.some(route => pathname.startsWith(route))
   if (isPrivateRoute) {
     if (!isLocalIP(ip)) {
-      // Вариант А: Показать страницу 403 Forbidden
-      //return new NextResponse('Доступ ограничен: только для локальной сети', { status: 403 })
+      const alertLog = {
+        app: 'next-sveden',
+        timestamp: new Date().toISOString(),
+        level: 'WARNING',
+        message: 'Unauthorized external access attempt to admin page',
+        method: request.method,
+        url: pathname,
+        ip: ip,
+        userAgent: request.headers.get('user-agent') || 'unknown'
+      };
+      console.warn(JSON.stringify(alertLog));
 
-      // Вариант Б: Перенаправить на страницу авторизации или главную
       return NextResponse.redirect(new URL('/sveden/common/', request.url))
     }
   }
-
   return NextResponse.next()
 }
 

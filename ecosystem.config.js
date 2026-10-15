@@ -11,8 +11,10 @@ module.exports = {
         PORT: 3000
       },
       out_file: '/var/log/sveden-app/sveden-app-out.log',
-      error_file: '/var/log/sveden-app/sveden-app-error.log',
+      error_file:'/var/log/sveden-app/sveden-app-error.log',
       merge_logs: true,
     },
   ],
 };
+
+

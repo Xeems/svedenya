@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto, Noto_Sans, Playfair_Display, Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNav from "@/components/SideNav";
 import { cn } from "@/lib/utils";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
-const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
-const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
-const roboto = Roboto({
-  weight: ['400', '700'], 
-  subsets: ['latin', 'cyrillic'], 
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'], // Укажите нужные подмножества
   display: 'swap',
-});
-
-const geist = Geist({
-  subsets: ['latin', 'cyrillic'],
 })
 
 export const metadata: Metadata = {
@@ -25,23 +18,23 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="ru" 
-      className={cn("h-full", "antialiased", geist.className)}
+      lang="ru"
+      className={cn("h-full", "antialiased", inter.className)}
     >
       <body className="min-h-full w-full bg-background text-foreground antialiased ">
         <SidebarProvider>
           <SideNav />
-            <div className="flex-1 flex flex-col min-w-0 relative">
-              <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-                <SidebarTrigger />
-              </header>
-              
+          <div className="flex-1 flex flex-col min-w-0 relative">
+            <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
+              <SidebarTrigger />
+            </header>
 
-              <div className="flex-1 p-4 md:p-6">
-                {children}
-              </div>
+
+            <div className="flex-1 p-4 md:p-6">
+              {children}
             </div>
-        
+          </div>
+
         </SidebarProvider>
       </body>
     </html>

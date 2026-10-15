@@ -329,7 +329,7 @@
     "sectionId": "objects-standalone-paragraphs",
     "name": "Информация об условиях обеспечения доступной среды",
     "type": "list",
-    "hidden": false,
+    "hidden": true,
     "data": [
       {
         "type": "text",
@@ -410,7 +410,7 @@
     "hidden": false,
     "headers": [
       "Наименование показателя",
-      "Общежития *",
+      "Общежития",
       "Интернаты"
     ],
     "hiddenColumns": [],

@@ -22,7 +22,7 @@ const navigationLinks: NavigationLink[] = [
     { href: 'education', name: 'Образование' },
     { href: 'managers', name: 'Руководство' },
     { href: 'employees', name: 'Педагогический состав' },
-    { href: 'objects', name: 'Материально-техническое обеспечение и оснащенность образовательного процесса. Доступная среда' },
+    { href: 'objects', name: 'Материально-техническое обеспечение и оснащенность' },
     { href: 'paid_edu', name: 'Платные образовательные услуги' },
     { href: 'budget', name: 'Финансово-хозяйственная деятельность' },
     { href: 'vacant', name: 'Вакантные места для приема (перевода) обучающихся' },
@@ -44,14 +44,14 @@ export default function SideNav() {
                     <SidebarMenu className="gap-1 py-4 px-2">
                         {navigationLinks.map((link) => (
                           <SidebarMenuItem key={link.href} className='transition-all duration-500 ease-in-out'>
-                              <SidebarMenuButton asChild className="h-auto py-2.5 px-3 hover:font-semibold hover:text-accent-foreground whitespace-normal align-middle">
+                              {/* <SidebarMenuButton  asChild className="h-auto py-2.5 px-3 hover:font-semibold hover:text-accent-foreground whitespace-normal align-middle"> */}
                                   <Link 
                                       href={`/${link.href}`}
-                                      className="font-medium text-base transition-colors line-clamp-3 flex items-center text-wrap w-full"
+                                      className="line-clamp-6 text-wrap w-full h-auto py-2.5 px-3 hover:font-semibold hover:text-accent-foreground whitespace-normal align-middle"
                                   > 
                                       {link.name}
                                   </Link>
-                              </SidebarMenuButton>
+                              {/* </SidebarMenuButton> */}
                           </SidebarMenuItem>
                         ))}
                     </SidebarMenu>

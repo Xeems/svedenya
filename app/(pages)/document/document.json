@@ -146,9 +146,9 @@
         "signHref": "https://nii-kpg.ru/wp-content/uploads/2026/10/polog_o_perevod_otchislen_21_04_2021-2.pdf.sig",
         "signInfo": {
           "owner": "Коротенко Ольга Юрьевна",
-          "dateSigning": "06.10.2026 15:00:00",
+          "dateSigning": "06.10.2026 ",
           "issuer": "И.О. Директора",
-          "hash": "123"
+          "hash": "435BAC5DC8CCEC090B0207B7C3DFD9D4"
         }
       },
       {
@@ -165,6 +165,7 @@
         },
         "hidden": true
       }
-    ]
+    ],
+    "hidden": false
   }
 ]
